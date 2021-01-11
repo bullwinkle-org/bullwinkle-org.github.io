@@ -1,2 +1,2 @@
-# bullwinkle.ml
-Organization web page
+# Bullwinkle's Organization page
+public stuff
