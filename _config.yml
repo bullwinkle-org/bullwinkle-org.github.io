@@ -1,8 +1,8 @@
-title: Bullwinkle-org
+title: Bullwinkle org
 theme: jekyll-theme-minimal
 subtitle: "Public monitoring page"
-description: "Description"
-share: "Shared"
-url: https://www.bullwinkle.ml
+description: "[description]"
+share: "[share]"
+url: https://bullwinkle.ml
 permalink: pretty
 exclude: ['node_modules']
