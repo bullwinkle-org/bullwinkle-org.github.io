@@ -1,10 +1,9 @@
 title: Bullwinkle org
-remote_theme: ItsMeaga1n/minimal-categorized
+theme: jekyll-theme-minimal
+# remote_theme: ItsMeaga1n/minimal-categorized
 subtitle: "Public monitoring page"
 description: "[description]"
 share: "[share]"
 url: https://bullwinkle.ml
 permalink: pretty
 exclude: ['node_modules']
-
-theme: jekyll-theme-minimal
