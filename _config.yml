@@ -6,3 +6,5 @@ share: "[share]"
 url: https://bullwinkle.ml
 permalink: pretty
 exclude: ['node_modules']
+
+theme: jekyll-theme-minimal
