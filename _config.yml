@@ -6,4 +6,6 @@ description: "Bullwinkle and friends blog"
 share: "Bullwinkle and friends public space"
 url: https://bullwinkle.space
 permalink: pretty
+sass:
+  style: compressed
 exclude: ['node_modules']

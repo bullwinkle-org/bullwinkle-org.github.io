@@ -3,7 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
+    <!-- inline styles -->
+    {% raw %}
+        {% capture styles %}
+            {% include styles/inline.scss %}
+        {% endcapture %}
+        <style>{{ styles | scssify }}</style>
+    {% endraw %}
+    <!-- end inline styles -->
+
+    <!-- main styles -->
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <!-- end main styles -->
   </head>
   <body>
     <div class="site-navigation">{% include navigation.html %}</div>
