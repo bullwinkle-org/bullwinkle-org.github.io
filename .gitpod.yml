@@ -3,4 +3,4 @@ image:
 
 tasks:
   - init: gem install bundler && bundle install
-    command: 'echo "TODO: Replace with command to start project"'
+    command: bundle exec jekyll serve
