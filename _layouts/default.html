@@ -1,15 +1,14 @@
+{% capture styles %}
+    {% include styles/inline.scss %}
+{% endcapture %}
+
 <!doctype html>
 <html>
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
     <!-- inline styles -->
-    {% raw %}
-        {% capture styles %}
-            {% include styles/inline.scss %}
-        {% endcapture %}
-        <style>{{ styles | scssify }}</style>
-    {% endraw %}
+    <style>{{ styles | scssify }}</style>
     <!-- end inline styles -->
 
     <!-- main styles -->
