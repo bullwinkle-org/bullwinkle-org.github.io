@@ -3,4 +3,4 @@ image:
 
 tasks:
   - init: gem install bundler && bundle install
-    command: bundle exec jekyll serve
+    command: bundle exec jekyll serve --trace

@@ -1,9 +1,9 @@
-title: Bullwinkle org
-theme: jekyll-theme-minimal
+title: Bullwinkle and friends
+# theme: jekyll-theme-minimal
 # remote_theme: ItsMeaga1n/minimal-categorized
-subtitle: "Public monitoring page"
-description: "[description]"
-share: "[share]"
-url: https://bullwinkle.ml
+subtitle: "Public space"
+description: "Bullwinkle and friends blog"
+share: "Bullwinkle and friends public space"
+url: https://bullwinkle.space
 permalink: pretty
 exclude: ['node_modules']
