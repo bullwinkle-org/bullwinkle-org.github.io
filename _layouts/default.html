@@ -1,23 +1,38 @@
 {% capture styles %}
-    {% include styles/inline.scss %}
+    {% include inline-styles.scss %}
+    {% if page.extra_styles %}{{ page.extra_styles }}{% endif %}
 {% endcapture %}
 
 <!doctype html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-    <!-- inline styles -->
-    <style>{{ styles | scssify }}</style>
-    <!-- end inline styles -->
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Public space for blog, portfolio, examples and static content.">
+    <meta name="keywords" content="frontend, web development, bullwinkle and friends, blog, portfolio, github pages, static site, jekyll">
 
-    <!-- main styles -->
+    <title>{{ page.title }}</title>
+
+    <!-- INLINE STYLES -->
+    <style>
+        {{ styles | scssify }}
+    </style>
+    <!-- END INLINE STYLES -->
+
+    <!-- MAIN STYLES -->
+    <!-- assets/css/styles.scss -->
     <link rel="stylesheet" href="/assets/css/styles.css">
-    <!-- end main styles -->
+    <!-- END MAIN STYLES -->
   </head>
   <body>
-    <div class="site-navigation">{% include navigation.html %}</div>
+    <div class="site-navigation">
+        {% include navigation.html %}
+    </div>
 
-    <div class="page-content">{{ content }}</div>
+    <div class="page-content">
+        {{ content }}
+    </div>
   </body>
 </html>
