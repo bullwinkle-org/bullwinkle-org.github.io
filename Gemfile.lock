@@ -1,28 +1,14 @@
-GIT
-  remote: https://github.com/ashmaroli/jekyll-manager.git
-  revision: 528813ec52787d9dc7a398ba74fc0c283e3c8ab6
-  specs:
-    jekyll-manager (0.1.1)
-      jekyll (>= 3.7, < 5.0)
-      oj (~> 3.3, >= 3.3.2)
-      sinatra (~> 1.4)
-      sinatra-contrib (~> 1.4)
-
 GEM
   remote: https://rubygems.org/
   specs:
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
-    backports (3.20.2)
-    classifier-reborn (2.2.0)
-      fast-stemmer (~> 1.0)
     colorator (1.1.0)
     concurrent-ruby (1.1.8)
     em-websocket (0.5.2)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     eventmachine (1.2.7)
-    fast-stemmer (1.0.2)
     ffi (1.14.2)
     forwardable-extended (2.6.0)
     http_parser.rb (0.6.0)
@@ -65,16 +51,9 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
-    multi_json (1.15.0)
-    oj (3.11.2)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (4.0.6)
-    rack (1.6.13)
-    rack-protection (1.5.5)
-      rack
-    rack-test (1.1.0)
-      rack (>= 1.0, < 3)
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
@@ -83,20 +62,8 @@ GEM
     safe_yaml (1.0.5)
     sassc (2.4.0)
       ffi (~> 1.9)
-    sinatra (1.4.8)
-      rack (~> 1.5)
-      rack-protection (~> 1.4)
-      tilt (>= 1.3, < 3)
-    sinatra-contrib (1.4.7)
-      backports (>= 2.0)
-      multi_json
-      rack-protection
-      rack-test
-      sinatra (~> 1.4.0)
-      tilt (>= 1.3, < 3)
     terminal-table (2.0.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
-    tilt (2.0.10)
     unicode-display_width (1.7.0)
 
 PLATFORMS
@@ -104,15 +71,12 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  classifier-reborn
   jekyll (>= 4.2.0)
   jekyll-datapage-generator
   jekyll-feed
-  jekyll-manager!
   jekyll-paginate-v2
   jekyll-seo-tag
   jekyll-sitemap
-  kramdown-parser-gfm
 
 BUNDLED WITH
    2.2.12
