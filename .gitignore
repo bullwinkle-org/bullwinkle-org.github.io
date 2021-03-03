@@ -103,6 +103,10 @@ dist
 # TernJS port file
 .tern-port
 
+# Jekyll
+_site
+.jekyll-cache
+
 # My
 .idea
 .DS_Store

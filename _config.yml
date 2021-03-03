@@ -2,16 +2,9 @@ title: Bullwinkle and friends
 # theme: jekyll-theme-minimal
 # remote_theme: ItsMeaga1n/minimal-categorized
 subtitle: "Public space"
-description: "Bullwinkle and friends blog"
+description: "Bullwinkle-org's public space for blog, portfolio, static content and experiments."
 share: "Bullwinkle and friends public space"
 url: https://bullwinkle.space
-
-permalink: pretty
-
-sass:
-  style: compressed
-
-collections_dir: collections
 
 collections:
   authors:
@@ -35,13 +28,19 @@ defaults:
     values:
       layout: "default"
 
-paginate: 10
-
+collections_dir: collections
+paginate: 3
+paginate_path: "/paginating/page:num/"
+permalink: pretty
 page_excerpts: true
+
+sass:
+  style: compressed
 
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-paginate
 
 exclude: ['node_modules']   
