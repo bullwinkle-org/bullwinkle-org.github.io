@@ -4,27 +4,23 @@ layout: default
 <div><a href="/blog/" class="link link--button">< blog</a></div>
 
 <h1>{{ page.title }}</h1>
+
+<pre>{{ page.author | jsonify }}</pre>
+
+{% assign author = site.authors | where: 'short_name', page.author | first %}
+
+{% assign author2 = site.authors | find: 'short_name', page.author %}
+
+<pre>{{ author | jsonify }}</pre>
+
+<pre>{{ author2 | jsonify }}</pre>
+
 <p>
     {{ page.date | date_to_string }} - {{ page.author }}
-
-    {% assign author = site.authors | where: 'short_name', page.author | first %}
-
-    <pre>{{ author | jsonify }}</pre>
-
 
     {% if author %}
         <a href="{{ author.url }}">1 {{ author.name }}</a>
     {% endif %}
-    
-    
-    {% assign author2 = site.authors | find: 'short_name', page.author %}
-
-    <pre>{{ author2 | jsonify }}</pre>
-
-    {% if author2 %}
-        <a href="{{ author2.url }}">2 {{ author2.name }}</a>
-    {% endif %}
-
 </p>
 
 
