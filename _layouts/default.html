@@ -58,12 +58,24 @@
     <!-- END MAIN STYLES -->
   </head>
   <body class="layout-root">
-    <div class="site-navigation layout-block">
-        {% include navigation.html %}
-    </div>
+    <header class="site-header layout-block">
+        <div >
+            {% include navigation.html %}
+        </div>        
+    </header>
 
     <div class="page-content layout-block">
         {{ content }}
     </div>
+
+    <footer class="site-footer layout-block">
+        {% for item in site.data.navigation %}
+            <a 
+                href="{{ item.link }}"
+                class="link {% if page.url == item.link %} active {% endif %}">
+                {{ item.name }}
+            </a>
+        {% endfor %}
+    </footer>
   </body>
 </html>
