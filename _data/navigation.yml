@@ -6,3 +6,7 @@
 
 - name: Blog
   link: /blog/
+
+- name: Authors
+  link: /authors/
+  

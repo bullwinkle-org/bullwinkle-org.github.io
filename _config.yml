@@ -9,3 +9,6 @@ permalink: pretty
 sass:
   style: compressed
 exclude: ['node_modules']
+collections:
+  authors:
+    output: true
