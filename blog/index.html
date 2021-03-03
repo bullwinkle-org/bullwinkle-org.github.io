@@ -1,34 +1,25 @@
 ---
 title: Blog
 ---
-# Latest Posts
 
 <!-- This loops through the paginated posts -->
-## all posts
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      {{ post.excerpt }}
-    </li>
-  {% endfor %}
-</ul>
-
-
-<!-- This loops through the paginated posts -->
-## pagination posts
 {% for post in paginator.posts %}
   <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
   <p class="author">
-    <span class="date">{{ post.date }}</span>
+    <span class="date">{{ post.date | date_to_string }}</span>
+    {% assign author = site.authors | find: 'short_name', post.author %}
+    {% if author %}
+        - <a href="{{ author.url }}">{{ author.name }}</a>
+    {% else %}
+        - {{ page.author }}
+    {% endif %}    
   </p>
   <div class="content">
-    {{ post.content }}
+    {{ post.excerpt }}
   </div>
 {% endfor %}
 
 <!-- Pagination links -->
-## pagination links
 <div class="pagination">
   {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path }}" class="previous">
