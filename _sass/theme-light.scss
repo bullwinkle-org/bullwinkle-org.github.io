@@ -1,0 +1,24 @@
+@import './context/index';
+
+.site-root[data-site-theme="light"] {
+	// overrides
+	$color-background: #bbb;
+	$color-default: #333;
+	$color-primary: #4949DD;
+	$color-secondary: #757575;
+	$color-accent: #de13de;
+
+	@import 'elements.scss';
+
+	color: $color-default;
+	background-color: $color-background;
+
+	.site-header {
+		border: 2px solid $color-primary;
+	}
+
+	.site-footer {
+		border: 2px solid $color-primary;
+	}
+}
+

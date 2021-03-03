@@ -1,0 +1,25 @@
+@import './context/index';
+
+.site-root[data-site-theme="dark"] {
+	// overrides
+	$color-background: #333;
+	$color-default: #bbb;
+	$color-primary: #4949DD;
+	$color-secondary: grey;
+	$color-accent: #de13de;
+
+	@import 'elements.scss';
+	@import 'components.scss';
+	@import 'layouts.scss';
+
+	color: $color-default;
+	background-color: $color-background;
+
+	.site-header {
+		border: 2px solid $color-primary;
+	}
+
+	.site-footer {
+		border: 2px solid $color-primary;
+	}
+}

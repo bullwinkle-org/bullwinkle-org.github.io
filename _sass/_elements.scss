@@ -1,14 +1,14 @@
 .link {
-    color: blue;
+    color: $color-primary;
     text-decoration: underline;
-    
+
     &:hover {
         text-decoration: none;
     }
 
     &.active {
-        color: red;
-    }    
+        color: $color-accent;
+    }
 
     &--button {
         font-size: 1.6rem;
@@ -17,6 +17,6 @@
 
         &:hover {
             text-decoration: underline;
-        }        
+        }
     }
 }

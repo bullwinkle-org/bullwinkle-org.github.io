@@ -1,0 +1,17 @@
+.row {
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.row-vertical {
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.col {
+	flex: 1;
+}
+
+.col-auto {
+	flex: 0 0 auto;
+}

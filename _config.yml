@@ -41,13 +41,5 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-paginate
-  - jekyll-admin
-  
-whitelist:
-  - jekyll-admin
-  - classifier-reborn
 
 livereload: true
-
-exclude: ['node_modules']   
