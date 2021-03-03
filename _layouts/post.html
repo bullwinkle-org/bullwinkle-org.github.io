@@ -1,22 +1,30 @@
 ---
 layout: default
 ---
-<div><a href="/blog/" class="link link--button">< back to blog</a></div>
+<div><a href="/blog/" class="link link--button">< blog</a></div>
 
 <h1>{{ page.title }}</h1>
 <p>
     {{ page.date | date_to_string }} - {{ page.author }}
 
     {% assign author = site.authors | where: 'short_name', page.author | first %}
+
+    <pre>{{ author | jsonify }}</pre>
+
+
     {% if author %}
-        \- <a href="{{ author.url }}">1 {{ author.name }}</a>
-    {% endif %}   
+        <a href="{{ author.url }}">1 {{ author.name }}</a>
+    {% endif %}
     
     
     {% assign author2 = site.authors | find: 'short_name', page.author %}
+
+    <pre>{{ author2 | jsonify }}</pre>
+
     {% if author2 %}
-        \- <a href="{{ author2.url }}">2 {{ author2.name }}</a>
-    {% endif %}   
+        <a href="{{ author2.url }}">2 {{ author2.name }}</a>
+    {% endif %}
+
 </p>
 
 
