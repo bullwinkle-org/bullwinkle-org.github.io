@@ -43,5 +43,9 @@ plugins:
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-admin
+  
+whitelist:
+  - jekyll-admin
+  - classifier-reborn
 
 exclude: ['node_modules']   
