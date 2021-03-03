@@ -10,5 +10,8 @@
 - name: Authors
   link: /authors/
 
+- name: System info
+  link: /system-info/
+
 - name: Admin
   link: /admin/
