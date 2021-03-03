@@ -38,12 +38,12 @@ collections_dir: collections
 sass:
   style: compressed
 
-plugins:
-  - jekyll-feed
+plugins:  
   - jekyll-sitemap
+  - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-datapage-generator
   - jekyll-paginate-v2
-  - jekyll-manager
+  - jekyll-datapage-generator
+  - jekyll-manager  
 
 livereload: true
