@@ -48,4 +48,6 @@ whitelist:
   - jekyll-admin
   - classifier-reborn
 
+livereload: true
+
 exclude: ['node_modules']   
