@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 gem "jekyll",  ">=4.2.0"
-gem 'classifier-reborn'
+gem "rack", ">= 2.1.4"
 
 group :jekyll_plugins do
   gem 'jekyll-sitemap'
