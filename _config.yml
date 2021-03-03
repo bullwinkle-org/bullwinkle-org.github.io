@@ -29,11 +29,10 @@ collections:
     output: true
 
 #lsi: true
-
-#paginate: 5
-#paginate_path: "/blog/page:num/"
 permalink: /:categories/:year/:month/:day/:title/
-#page_excerpts: true
+page_excerpts: true
+paginate: 5
+paginate_path: "/blog/page:num/"
 collections_dir: collections
 
 sass:
@@ -44,6 +43,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-datapage-generator
+  - jekyll-paginate-v2
   - jekyll-manager
 
 livereload: true
