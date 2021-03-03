@@ -3,11 +3,17 @@
 }
 
 .layout-block {
-    padding: $global_padding;
+    outline: 1px dashed grey;
 }
 
-.site-header {}
+.site-header {
+    outline: 1px dashed grey;
+}
 
-.page-content {}
+.page-content {
+    outline: 1px dashed grey;
+}
 
-.site-footer {}
+.site-footer {
+    outline: 1px dashed grey;
+}
