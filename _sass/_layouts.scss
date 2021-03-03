@@ -7,7 +7,6 @@ html, body {
 }
 
 .layout-root {
-    outline: 1px dashed grey;
     height: 100%;
     overflow: auto;
     display: flex;
@@ -15,20 +14,19 @@ html, body {
 }
 
 .site-header {
-    outline: 2px solid purple;
-    margin-bottom: $global_padding / 2;
+    border: 2px solid purple;
     flex: 0 0 auto;
 }
 
 .page-content {
-    outline: 1px dashed grey;
     flex: 1;
     min-height: 500px;
     overflow: auto;
+    padding-top: $global_padding / 2;
+    padding-bottom: $global_padding / 2;
 }
 
 .site-footer {
-    outline: 2px solid purple;
-    margin-top: $global_padding / 2;
+    border: 2px solid purple;
     flex: 0 0 auto;
 }
