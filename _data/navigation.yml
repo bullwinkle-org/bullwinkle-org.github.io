@@ -9,4 +9,6 @@
 
 - name: Authors
   link: /authors/
-  
+
+- name: Admin
+  link: /admin/
