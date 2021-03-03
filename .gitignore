@@ -106,6 +106,7 @@ dist
 # Jekyll
 _site
 .jekyll-cache
+.jekyll-metadata
 
 # My
 .idea
