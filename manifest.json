@@ -23,13 +23,18 @@
 	"related_applications": [],
 	"shortcuts": [
 		{
-			"name": "Blog",
-			"url": "/blog/",
-			"description": "Bullwinkle-org`s blog"
+            "name": "Blog",
+            "short_name": "Blog",
+            "description": "Bullwinkle-org`s blog",
+            "url": "/blog/",
+            "icons": [{ "src": "/assets/favicon/android-chrome-192x192.png", "sizes": "192x192" }]    
 		},
 		{
-			"name": "Authors",
-			"url": "/authors/"
+            "name": "Authors",
+            "short_name": "Authors",
+            "description": "Bullwinkle-org`s authors",
+            "url": "/authors/",
+            "icons": [{ "src": "/assets/favicon/android-chrome-192x192.png", "sizes": "192x192" }]    
 		}
 	],
 	"manifest_version": 2,
