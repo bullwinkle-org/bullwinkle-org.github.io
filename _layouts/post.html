@@ -9,13 +9,13 @@ layout: default
 
     {% assign author = site.authors | where: 'short_name', page.author | first %}
     {% if author %}
-        - <a href="{{ author.url }}">{{ author.name }}</a>
+        \- <a href="{{ author.url }}">1 {{ author.name }}</a>
     {% endif %}   
     
     
     {% assign author2 = site.authors | find: 'short_name', page.author %}
     {% if author2 %}
-        - <a href="{{ author2.url }}">{{ author2.name }}</a>
+        \- <a href="{{ author2.url }}">2 {{ author2.name }}</a>
     {% endif %}   
 </p>
 
