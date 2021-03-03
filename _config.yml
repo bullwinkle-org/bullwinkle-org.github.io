@@ -7,11 +7,12 @@ share: "Bullwinkle and friends public space"
 url: https://bullwinkle.space
 
 permalink: pretty
+
 sass:
   style: compressed
-exclude: ['node_modules']
 
 collections_dir: collections
+
 collections:
   authors:
     output: true
@@ -34,9 +35,13 @@ defaults:
     values:
       layout: "default"
 
-paginate: 10      
+paginate: 10
+
+page_excerpts: true
 
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-seo-tag      
+  - jekyll-seo-tag
+
+exclude: ['node_modules']   
