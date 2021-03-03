@@ -26,12 +26,12 @@
     <!-- <link rel="stylesheet" href="/assets/css/styles.css"> -->
     <!-- END MAIN STYLES -->
   </head>
-  <body>
-    <div class="site-navigation">
+  <body class="layout-root">
+    <div class="site-navigation layout-block">
         {% include navigation.html %}
     </div>
 
-    <div class="page-content">
+    <div class="page-content layout-block">
         {{ content }}
     </div>
   </body>
