@@ -5,10 +5,30 @@ subtitle: "Public space"
 description: "Bullwinkle and friends blog"
 share: "Bullwinkle and friends public space"
 url: https://bullwinkle.space
+
 permalink: pretty
 sass:
   style: compressed
 exclude: ['node_modules']
+
 collections:
   authors:
     output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+  - scope:
+      path: ""
+    values:
+      layout: "default"    

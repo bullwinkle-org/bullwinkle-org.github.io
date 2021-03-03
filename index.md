@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Bullwinkle and friends
 ---
 # Bullwinkle's Organization page
