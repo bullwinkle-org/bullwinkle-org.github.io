@@ -44,6 +44,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-paginate-v2
   - jekyll-datapage-generator
-  - jekyll-manager  
+# - jekyll-manager
 
 livereload: true
