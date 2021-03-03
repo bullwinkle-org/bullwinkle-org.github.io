@@ -1,0 +1,28 @@
+{
+	"version": 3,
+	"file": "styles.css",
+	"sources": [
+		"styles.scss",
+		"_sass/main.scss",
+		"_sass/_variables.scss",
+		"_sass/_functions.scss",
+		"_sass/_reset.scss",
+		"_sass/_base.scss",
+		"_sass/_elements.scss",
+		"_sass/_components.scss",
+		"_sass/_layouts.scss"
+	],
+	"sourcesContent": [
+		"@import \"main\";",
+		"@import 'variables.scss';\n@import 'functions.scss';\n\n@import 'reset.scss';\n@import 'base.scss';\n@import 'elements.scss';\n@import 'components.scss';\n@import 'layouts.scss';",
+		"$global_padding: 20px;",
+		"",
+		"*, *:before, *:after {\n    box-sizing: border-box;\n}\n\nhtml, body {\n    padding: 0;\n    margin: 0;\n}",
+		"html {\n    font-weight: 300;\n    font-family: 'Courier New', Courier, monospace;\n    font-size: 10px;\n    line-height: 1.6;\n}\n\nbody {\n    font-size: 1.8rem;\n    background-color: azure;\n}\n",
+		".link {\n    color: blue;\n    text-decoration: underline;\n    \n    &:hover {\n        text-decoration: none;\n    }\n\n    &.active {\n        color: red;\n    }    \n\n    &--button {\n        font-size: 1.6rem;\n        font-weight: 600;\n        text-decoration: none;\n\n        &:hover {\n            text-decoration: underline;\n        }        \n    }\n}\n",
+		".site-navigation {\n    outline: 2px solid purple;\n    margin-bottom: $global_padding / 2;\n\n    & > nav > .link {\n        display: inline-block;\n        margin: 4px 2px;\n    }\n}\n\n.page-content {\n    outline: 2px solid violet;\n}",
+		".layout-root {\n    padding: $global_padding;\n}\n\n.layout-block {\n    padding: $global_padding;\n}"
+	],
+	"names": [],
+	"mappings": "AIAA,AAAA,CAAC,CAAE,CAAC,CAAC,MAAM,CAAE,CAAC,CAAC,KAAK,AAAC,CACjB,UAAU,CAAE,UAAU,CACzB,AAED,AAAA,IAAI,CAAE,IAAI,AAAC,CACP,OAAO,CAAE,CAAC,CACV,MAAM,CAAE,CAAC,CACZ,ACPD,AAAA,IAAI,AAAC,CACD,WAAW,CAAE,GAAG,CAChB,WAAW,CAAE,iCAAiC,CAC9C,SAAS,CAAE,IAAI,CACf,WAAW,CAAE,GAAG,CACnB,AAED,AAAA,IAAI,AAAC,CACD,SAAS,CAAE,MAAM,CACjB,gBAAgB,CAAE,KAAK,CAC1B,ACVD,AAAA,KAAK,AAAC,CACF,KAAK,CAAE,IAAI,CACX,eAAe,CAAE,SAAS,CAmB7B,AArBD,AAII,KAJC,CAIC,KAAK,AAAC,CACJ,eAAe,CAAE,IAAI,CACxB,AANL,AAQI,KARC,AAQA,OAAO,AAAC,CACL,KAAK,CAAE,GAAG,CACb,AAVL,AAYI,aAZC,AAYS,CACN,SAAS,CAAE,MAAM,CACjB,WAAW,CAAE,GAAG,CAChB,eAAe,CAAE,IAAI,CAKxB,AApBL,AAiBQ,aAjBH,CAiBK,KAAK,AAAC,CACJ,eAAe,CAAE,SAAS,CAC7B,ACnBT,AAAA,gBAAgB,AAAC,CACb,OAAO,CAAE,gBAAgB,CACzB,aAAa,CAAE,IAAmB,CAMrC,AARD,AAII,gBAJY,CAIR,GAAG,CAAG,KAAK,AAAC,CACZ,OAAO,CAAE,YAAY,CACrB,MAAM,CAAE,OAAO,CAClB,AAGL,AAAA,aAAa,AAAC,CACV,OAAO,CAAE,gBAAgB,CAC5B,ACZD,AAAA,YAAY,AAAC,CACT,OAAO,CNDM,IAAI,CMEpB,AAED,AAAA,aAAa,AAAC,CACV,OAAO,CNLM,IAAI,CMMpB"
+}
