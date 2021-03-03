@@ -1,5 +1,11 @@
 .site-navigation {
     outline: 2px solid purple;
+    margin-bottom: $global_padding / 2;
+
+    & > nav > .link {
+        display: inline-block;
+        margin: 4px 2px;
+    }
 }
 
 .page-content {
