@@ -1,16 +1,22 @@
 .link {
     color: blue;
-
-    &--button {
-        font-size: 1.6rem;
-        font-weight: 500;
-
-        &, &:hover {
-            text-decoration: none;
-        }
+    text-decoration: underline;
+    
+    &:hover {
+        text-decoration: none;
     }
 
     &.active {
         color: red;
+    }    
+
+    &--button {
+        font-size: 1.6rem;
+        font-weight: 600;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }        
     }
 }
