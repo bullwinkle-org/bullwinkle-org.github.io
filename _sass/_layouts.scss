@@ -1,13 +1,14 @@
-.layout-root {
+.layout-block {
     padding: $global_padding;
 }
 
-.layout-block {
+.layout-root {
     outline: 1px dashed grey;
 }
 
 .site-header {
-    outline: 1px dashed grey;
+    outline: 2px solid purple;
+    margin-bottom: $global_padding / 2;
 }
 
 .page-content {
@@ -15,5 +16,6 @@
 }
 
 .site-footer {
-    outline: 1px dashed grey;
+    outline: 2px solid purple;
+    margin-top: $global_padding / 2;
 }
