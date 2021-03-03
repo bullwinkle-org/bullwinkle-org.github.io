@@ -11,15 +11,16 @@ layout: default
 
 {% assign author2 = site.authors | find: 'short_name', page.author %}
 
-<pre>{{ author | jsonify }}</pre>
-
-<pre>{{ author2 | jsonify }}</pre>
+<script>
+    var author = {{ author | jsonify }};
+    var author2 = {{ author2 | jsonify }};    
+</script>
 
 <p>
     {{ page.date | date_to_string }} - {{ page.author }}
 
     {% if author %}
-        <a href="{{ author.url }}">1 {{ author.name }}</a>
+        <a href="{{ author.url }}">{{ author.name }}</a>
     {% endif %}
 </p>
 
