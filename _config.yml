@@ -28,11 +28,9 @@ collections:
   authors:
     output: true
 
-#lsi: true
+lsi: true
 permalink: /blog/:categories/:year/:month/:day/:title/
 page_excerpts: true
-# paginate: 5
-# paginate_path: "/blog/page:num/"
 collections_dir: collections
 
 sass:
@@ -47,7 +45,6 @@ plugins:
 # - jekyll-manager
 
 livereload: true
-
 
 ############################################################
 # Site configuration for the Jekyll 3 Pagination Gem
