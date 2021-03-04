@@ -75,20 +75,20 @@
 				};
 			})();
 		</script>
-		<header class="site-header layout-block row col-auto">
+		<header class="site-header layout-block row col-auto" style="align-items: center;">
 			<div class="col">{% include navigation.html %}</div>
 
 			<div class="col-auto">
-				<select
-						name="theme-select"
-						id="themeSelectElement"
-						onchange="window.BWKStore.setTheme(this.value);"
+				<form
+						name="bwkThemeForm"
+						onchange="window.BWKStore.setTheme(this.bwkTheme.value)"
+						action="javascript:void(0)"
 				>
-					<option value="light">light</option>
-					<option value="dark">dark</option>
-				</select>
+					<label style="cursor:pointer;"><input type="radio" name="bwkTheme" id="bwk-theme-light" value="light"> light</label><br>
+					<label style="cursor:pointer;"><input type="radio" name="bwkTheme" id="bwk-theme-dark" value="dark"> dark</label>
+				</form>
 
-				<script>themeSelectElement.value = BWKStore.currentTheme;</script>
+				<script>window.bwkThemeForm.bwkTheme.value = BWKStore.currentTheme;</script>
 			</div>
     </header>
 

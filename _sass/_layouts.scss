@@ -3,7 +3,7 @@ html, body {
 }
 
 .layout-block {
-    padding: $global_padding;
+    padding: $global_padding $global_padding*2;
 }
 
 .layout-root {
@@ -13,6 +13,7 @@ html, body {
 
 .site-content {
     overflow: auto;
-    padding-top: $global_padding / 2;
-    padding-bottom: $global_padding / 2;
+    padding-top: $global_padding;
+    padding-bottom: $global_padding * 2;
+    box-shadow: -1px 3px 18px 0px rgba(0, 0, 0, 0.4) inset;
 }
