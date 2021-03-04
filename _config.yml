@@ -32,6 +32,7 @@ collections:
 permalink: /blog/:categories/:year/:month/:day/:title/
 page_excerpts: true
 collections_dir: collections
+#pages_dir: pages
 
 sass:
   style: compressed
