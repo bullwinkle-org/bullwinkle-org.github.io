@@ -1,0 +1,30 @@
+{
+  "name": "bullwinkle-org.github.io",
+  "version": "1.0.0",
+  "description": "[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/bullwinkle-org/bullwinkle-org.github.io)",
+  "main": "admin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bullwinkle-org/bullwinkle-org.github.io.git"
+  },
+  "keywords": [
+    "jekyll",
+    "static",
+    "site",
+    "github",
+    "pages",
+    "netlify"
+  ],
+  "author": "badenov196@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bullwinkle-org/bullwinkle-org.github.io/issues"
+  },
+  "homepage": "https://github.com/bullwinkle-org/bullwinkle-org.github.io#readme",
+  "dependencies": {
+    "netlify-cms-app": "^2.14.26"
+  }
+}
