@@ -34,6 +34,10 @@ jobs:
           cname: 'bullwinkle.space'                  # Default is to not use a cname
 #          actor: ''                  # Default is the GITHUB_ACTOR
 
+  notify:
+      needs: build_and_deploy
+      runs-on: ubuntu-latest
+      steps:
       - name: Notify Telegram
         uses: yanzay/notify-telegram@v0.1.0
         if: always()
