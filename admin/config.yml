@@ -13,13 +13,19 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Author", name: "author", widget: "relation", collection: "authors", search_fields: ["name","short_name","position"], value_field: "short_name", display_fields: [ "name", "short_name", "position" ]}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Categories", name: "categories", widget: "list", required: false }
-      - {label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - label: "Author",
+        name: "author",
+        widget: "relation",
+        collection: "authors",
+        search_fields: [ "name","short_name","position" ],
+        value_field: "short_name",
+        display_fields:  ["{{short_name}} ({{name}}) - {{position}}"]
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Categories", name: "categories", widget: "list", required: false }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
 
   - name: "authors"
     label: "Authors"
@@ -27,7 +33,8 @@ collections:
     create: true
     slug: "{{short_name}}"
     fields:
-      - {label: "Name", name: "name", widget: "string"}
-      - {label: "Short name", name: "short_name", widget: "string"}
-      - {label: "Position", name: "position", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Short name", name: "short_name", widget: "string" }
+      - { label: "Position", name: "position", widget: "string" }
+      - { label: "Avatar", name: "avatar", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
