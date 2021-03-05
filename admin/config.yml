@@ -16,13 +16,15 @@ collections:
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - label: "Author",
+      - {
+        label: "Author",
         name: "author",
         widget: "relation",
         collection: "authors",
         search_fields: [ "name","short_name","position" ],
         value_field: "short_name",
-        display_fields:  ["{{short_name}} ({{name}}) - {{position}}"]
+        display_fields: [ "{{short_name}} ({{name}}) - {{position}}" ]
+      }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Categories", name: "categories", widget: "list", required: false }
       - { label: "Tags", name: "tags", widget: "list", required: false }
