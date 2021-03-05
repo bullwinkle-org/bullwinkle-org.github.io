@@ -1,6 +1,11 @@
 media_folder: 'assets/uploads'
 public_folder: "/assets/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+  # repo: bullwinkle-org/bullwinkle-org.github.io
+
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
@@ -8,10 +13,13 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Categories", name: "categories", widget: "list", required: false }
+      - {label: "Tags", name: "tags", widget: "list", required: false }
+      - {label: "Publish Date", name: "date", widget: "datetime"}
 
   - name: "authors"
     label: "Authors"
@@ -22,8 +30,3 @@ collections:
       - {label: "Short name", name: "short_name", widget: "string"}
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Position", name: "position", widget: "string"}
-
-backend:
-  name: git-gateway
-#  repo: bullwinkle-org/bullwinkle-org.github.io
-  branch: main # Branch to update (optional; defaults to master)
