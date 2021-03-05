@@ -36,11 +36,11 @@ jobs:
 
   notify:
       needs: build_and_deploy
+      if: always()      
       runs-on: ubuntu-latest
       steps:
       - name: Notify Telegram
         uses: yanzay/notify-telegram@v0.1.0
-        if: always()
         with:
           chat: ${{ secrets.TG_CHANNEL }} # user id or channel name secret
           token: ${{ secrets.TG_TOKEN }} # token secret
