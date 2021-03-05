@@ -26,6 +26,7 @@ collections:
         display_fields: [ "{{short_name}} ({{name}}) - {{position}}" ]
       }
       - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image", required: false }
       - { label: "Categories", name: "categories", widget: "list", required: false, default: ['uncategorized'] }
       - { label: "Tags", name: "tags", widget: "list", required: false }
 
