@@ -6,7 +6,7 @@ description: "Bullwinkle-org's public space for blog, portfolio, static content 
 share: "Bullwinkle and friends public space"
 url: https://bullwinkle.space
 
-defaults:
+          /defaults:
   - scope:
       path: ""
       type: "authors"
