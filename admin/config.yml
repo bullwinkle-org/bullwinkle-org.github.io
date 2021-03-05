@@ -26,6 +26,6 @@ collections:
       - {label: "Position", name: "position", widget: "string"}
 
 backend:
-  name: github
-  repo: bullwinkle-org/bullwinkle-org.github.io
+  name: git-gateway
+#  repo: bullwinkle-org/bullwinkle-org.github.io
   branch: main # Branch to update (optional; defaults to master)
