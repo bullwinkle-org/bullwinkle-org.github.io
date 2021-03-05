@@ -3,7 +3,7 @@ name: Build and Deploy to Github Pages
 on:
   push:
     branches:
-      - main  # Here source code branch is `master`, it could be other branch
+      - main
 
 jobs:
   build_and_deploy:
@@ -33,3 +33,11 @@ jobs:
 #          bundler_ver: '>=0'         # Default is latest bundler version
           cname: 'bullwinkle.space'                  # Default is to not use a cname
 #          actor: ''                  # Default is the GITHUB_ACTOR
+
+      - name: Notify Telegram
+        uses: yanzay/notify-telegram@v0.1.0
+        if: always()
+        with:
+          chat: ${{ secrets.TG_CHANNEL }} # user id or channel name secret
+          token: ${{ secrets.TG_TOKEN }} # token secret
+          status: ${{ job.status }} # do not modify this line
