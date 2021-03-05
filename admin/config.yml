@@ -36,5 +36,5 @@ collections:
       - { label: "Name", name: "name", widget: "string" }
       - { label: "Short name", name: "short_name", widget: "string" }
       - { label: "Position", name: "position", widget: "string" }
-      - { label: "Avatar", name: "avatar", widget: "image" }
+      - { label: "Avatar", name: "avatar", widget: "image", default: "/uploads/bwk_bot.png" }
       - { label: "Body", name: "body", widget: "markdown" }
