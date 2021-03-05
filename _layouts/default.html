@@ -43,7 +43,12 @@
 		<link rel="stylesheet" href="/assets/css/theme-light.css">
 		<link rel="stylesheet" href="/assets/css/theme-dark.css">
 		<!-- END MAIN STYLES -->
-	</head>
+
+
+		<!-- NETLIFY -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+		<!-- END NETLIFY -->
+  </head>
 	<body class="site-root row-vertical" data-site-theme="light">
 		<script>
 			window.BWKStore = (() => {
@@ -99,5 +104,18 @@
     <footer class="site-footer layout-block col-auto">
         {% include navigation.html %}
     </footer>
+
+  <!-- NETLIFY -->
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
   </body>
 </html>

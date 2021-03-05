@@ -6,6 +6,12 @@ description: "Bullwinkle-org's public space for blog, portfolio, static content 
 share: "Bullwinkle and friends public space"
 url: https://bullwinkle.space
 
+collections_dir: collections
+
+collections:
+  authors:
+    output: true
+
 defaults:
   - scope:
       path: ""
@@ -24,14 +30,9 @@ defaults:
     values:
       layout: "default"
 
-collections:
-  authors:
-    output: true
-
 #lsi: true
 permalink: /blog/:categories/:year/:month/:day/:title/
 page_excerpts: true
-collections_dir: collections
 #pages_dir: pages
 
 sass:
