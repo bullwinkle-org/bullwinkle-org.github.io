@@ -11,5 +11,6 @@ group :jekyll_plugins do
   gem 'jekyll-seo-tag'
   gem 'jekyll-paginate-v2'
   gem 'jekyll-datapage-generator'
+  gem 'jekyll-pwa-plugin'  
 #   gem 'jekyll-manager', :git => "https://github.com/ashmaroli/jekyll-manager.git"
 end
