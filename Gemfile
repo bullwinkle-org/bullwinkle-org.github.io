@@ -1,8 +1,9 @@
 source "https://rubygems.org"
 
+gem "dotenv"
 gem "jekyll"
-# gem "jekyll", "3.9.0", :git => "https://github.com/boris-badenov/jekyll.git" # 4.2.0 as 3.9.0
 
+# gem "jekyll", "3.9.0", :git => "https://github.com/boris-badenov/jekyll.git" # 4.2.0 as 3.9.0
 # gem "classifier-reborn"
 # gem "kramdown-parser-gfm"
 

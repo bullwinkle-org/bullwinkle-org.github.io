@@ -121,7 +121,7 @@ pwa:
   precache_glob_directory: / # Optional
   precache_glob_patterns: # Optional
     - index.html
-    - "assets/{js,css,fonts}/**/*.{js,css,eot,svg,ttf,woff}"
+    - "assets/{js,css,fonts,uploads}/**/*.{js,css,eot,svg,png,jpj,ttf,woff}"
     - "{about,authors,blog,experiments}/**/*.html"
   precache_glob_ignores: # Optional
     - sw-register.js

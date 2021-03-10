@@ -12,3 +12,6 @@
 
 - name: System info
   link: /system-info/
+
+- name: Experiments
+  link: /experiments/
