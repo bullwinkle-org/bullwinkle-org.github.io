@@ -17,20 +17,4 @@ group :jekyll_plugins do
     gem 'jekyll-pwa-plugin'
     # gem 'jekyll-pwa-plugin', :git => "https://github.com/bullwinkle/jekyll-pwa.git"
     # gem 'jekyll-manager', :git => "https://github.com/ashmaroli/jekyll-manager.git"
-
-    gem "jekyll-swiss"
-    gem "minima"
-    gem "jekyll-theme-primer"
-    gem "jekyll-theme-architect"
-    gem "jekyll-theme-cayman"
-    gem "jekyll-theme-dinky"
-    gem "jekyll-theme-hacker"
-    gem "jekyll-theme-leap-day"
-    gem "jekyll-theme-merlot"
-    gem "jekyll-theme-midnight"
-    gem "jekyll-theme-minimal"
-    gem "jekyll-theme-modernist"
-    gem "jekyll-theme-slate"
-    gem "jekyll-theme-tactile"
-    gem "jekyll-theme-time-machine"
 end
