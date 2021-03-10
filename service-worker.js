@@ -2,7 +2,7 @@
 
 // set names for both precache & runtime cache
 workbox.core.setCacheNameDetails({
-    prefix: 'bullwinkle-space__',
+    prefix: 'bullwinkle_space',
     suffix: 'v1.0',
     precache: 'precache',
     runtime: 'runtime-cache'
@@ -35,7 +35,6 @@ workbox.routing.registerRoute(
 
 // use `StaleWhileRevalidate` third party files
 workbox.routing.registerRoute(
-    ///^https?:\/\/cdn.staticfile.org/,
     /^https?:\/\/media.githubusercontent.com/,
     new workbox.strategies.StaleWhileRevalidate()
 );
