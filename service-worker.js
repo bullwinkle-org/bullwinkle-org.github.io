@@ -2,7 +2,7 @@
 
 // set names for both precache & runtime cache
 workbox.core.setCacheNameDetails({
-    prefix: 'my-blog',
+    prefix: 'bullwinkle-space__',
     suffix: 'v1.0',
     precache: 'precache',
     runtime: 'runtime-cache'
@@ -29,12 +29,13 @@ workbox.routing.registerRoute(
 
 // use `CacheFirst` strategy for images
 workbox.routing.registerRoute(
-    /assets\/(images|favicon|uploads)/,
+    /assets\/(images|favicon|icons)/,
     new workbox.strategies.CacheFirst()
 );
 
 // use `StaleWhileRevalidate` third party files
 workbox.routing.registerRoute(
-    /^https?:\/\/cdn.staticfile.org/,
+    ///^https?:\/\/cdn.staticfile.org/,
+    /^https?:\/\/media.githubusercontent.com/,
     new workbox.strategies.StaleWhileRevalidate()
 );

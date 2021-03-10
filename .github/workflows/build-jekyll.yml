@@ -11,6 +11,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Pull LFS
+        run: "git -c filter.lfs.smudge= -c filter.lfs.required=false pull && git lfs pull"
+
       # Use GitHub Actions' cache to cache dependencies on servers
       - uses: actions/cache@v2
         with:
@@ -31,7 +34,7 @@ jobs:
           jekyll_baseurl: ''         # Default is according to _config.yml
           cname: 'bullwinkle.space'                  # Default is to not use a cname
           # repository: ''             # Default is current repository
-          # bundler_ver: '>=0'         # Default is latest bundler version          
+          # bundler_ver: '>=0'         # Default is latest bundler version
           # actor: ''                  # Default is the GITHUB_ACTOR
 
       - name: Notify Telegram

@@ -4,8 +4,9 @@ title: Bullwinkle and friends
 subtitle: "Public space"
 description: "Bullwinkle-org's public space for blog, portfolio, static content and experiments."
 share: "Bullwinkle and friends public space"
-repository: bullwinkle-org/bullwinkle-org.github.io
 url: https://bullwinkle.space
+
+repository: bullwinkle-org/bullwinkle-org.github.io
 
 collections_dir: collections
 
@@ -114,14 +115,14 @@ pagination:
 
 pwa:
   enabled: true # Optional
-#  sw_src_filepath: service-worker.js # Optional
-#  sw_dest_filename: service-worker.js # Optional
+  sw_src_filepath: service-worker.js # Optional
+  sw_dest_filename: service-worker.js # Optional
   dest_js_directory: assets/js # Required
-  precache_recent_posts_num: 5 # Optional
+  precache_recent_posts_num: 10 # Optional
   precache_glob_directory: / # Optional
   precache_glob_patterns: # Optional
     - index.html
-    - "assets/{js,css,fonts,uploads}/**/*.{js,css,eot,svg,png,jpj,ttf,woff}"
+    - "assets/{js,css,fonts,uploads}/**/*.{js,css,eot,svg,png,jpg,ttf,woff,mov}"
     - "{about,authors,blog,experiments}/**/*.html"
   precache_glob_ignores: # Optional
     - sw-register.js
