@@ -4,6 +4,7 @@ title: Bullwinkle and friends
 subtitle: "Public space"
 description: "Bullwinkle-org's public space for blog, portfolio, static content and experiments."
 share: "Bullwinkle and friends public space"
+github: [metadata]
 repository: bullwinkle-org/bullwinkle-org.github.io
 url: https://bullwinkle.space
 
