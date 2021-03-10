@@ -7,6 +7,7 @@ share: "Bullwinkle and friends public space"
 url: https://bullwinkle.space
 
 repository: bullwinkle-org/bullwinkle-org.github.io
+github: [metadata]
 
 collections_dir: collections
 
