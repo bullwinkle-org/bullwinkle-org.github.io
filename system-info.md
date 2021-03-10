@@ -12,6 +12,11 @@ title: System info
 ## Site.github
 {{ site.github | jsonify }}
 
+<script>
+  window.GITHUB = "{{ site.github | jsonify }}";
+  console.log(window.GITHUB);
+</script>
+
 ## Site.categories (TODO: create category-content page)
 <nav class="">
     <ul>
