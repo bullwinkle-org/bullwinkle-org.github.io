@@ -2,10 +2,10 @@
 
 // set names for both precache & runtime cache
 workbox.core.setCacheNameDetails({
-    prefix: 'bullwinkle.space',
+    prefix: 'bullwinkle.space.',
     suffix: 'v1.0',
-    precache: 'precache_storage',
-    runtime: 'runtime_cache_storage'
+    precache: 'precache',
+    runtime: 'runtime-cache'
 });
 
 // let Service Worker take control of pages ASAP
@@ -29,7 +29,7 @@ workbox.routing.registerRoute(
 
 // use `CacheFirst` strategy for images
 workbox.routing.registerRoute(
-    /assets\/(images|favicon|uploads)/,
+    /assets\/(images|favicon|icons)/,
     new workbox.strategies.CacheFirst()
 );
 
