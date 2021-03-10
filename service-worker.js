@@ -3,7 +3,7 @@
 // set names for both precache & runtime cache
 workbox.core.setCacheNameDetails({
     prefix: 'bullwinkle.space',
-    suffix: 'v2.0',
+    suffix: 'v1.0',
     precache: 'precache_storage',
     runtime: 'runtime_cache_storage'
 });
