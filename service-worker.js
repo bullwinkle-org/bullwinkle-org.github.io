@@ -2,10 +2,10 @@
 
 // set names for both precache & runtime cache
 workbox.core.setCacheNameDetails({
-    prefix: 'my-blog',
-    suffix: 'v1.0',
-    precache: 'precache',
-    runtime: 'runtime-cache'
+    prefix: 'bullwinkle.space',
+    suffix: 'v2.0',
+    precache: 'precache_storage',
+    runtime: 'runtime_cache_storage'
 });
 
 // let Service Worker take control of pages ASAP
