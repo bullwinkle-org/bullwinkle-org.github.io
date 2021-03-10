@@ -13,7 +13,7 @@ title: System info
 {{ site.github | jsonify }}
 
 <script>
-  window.GITHUB = "{{ site.github | jsonify }}";
+  window.GITHUB = {{ site.github | jsonify }};
   console.log(window.GITHUB);
 </script>
 
