@@ -6,7 +6,7 @@ description: "Bullwinkle-org's public space for blog, portfolio, static content 
 share: "Bullwinkle and friends public space"
 url: https://bullwinkle.space
 
-repository: https://github.com/bullwinkle-org/bullwinkle-org.github.io.git
+repository: bullwinkle-org/bullwinkle-org.github.io
 
 collections_dir: collections
 
