@@ -4,9 +4,8 @@ title: Bullwinkle and friends
 subtitle: "Public space"
 description: "Bullwinkle-org's public space for blog, portfolio, static content and experiments."
 share: "Bullwinkle and friends public space"
-url: https://bullwinkle.space
-
 repository: bullwinkle-org/bullwinkle-org.github.io
+url: https://bullwinkle.space
 
 collections_dir: collections
 
@@ -121,8 +120,9 @@ pwa:
   precache_recent_posts_num: 5 # Optional
   precache_glob_directory: / # Optional
   precache_glob_patterns: # Optional
-    - "{js,css,fonts}/**/*.{js,css,eot,svg,ttf,woff}"
     - index.html
+    - "assets/{js,css,fonts}/**/*.{js,css,eot,svg,ttf,woff}"
+    - "{about,authors,blog,experiments}/**/*.html"
   precache_glob_ignores: # Optional
     - sw-register.js
     - "fonts/**/*"
