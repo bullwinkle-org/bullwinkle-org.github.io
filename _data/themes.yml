@@ -1,0 +1,5 @@
+THEMES:
+  LIGHT: &default 'light'
+  DARK: 'dark'
+
+DEFAULT_THEME: *default

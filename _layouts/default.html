@@ -14,7 +14,8 @@
 
   <!-- SEO -->
   <meta name="robots" content="noindex">
-  <meta name="keywords" content="frontend, web development, bullwinkle and friends, blog, portfolio, github pages, static site, jekyll">
+  <meta name="keywords"
+        content="frontend, web development, bullwinkle and friends, blog, portfolio, github pages, static site, jekyll">
   {% seo %}
   <meta property="og:type" content="website"/>
   <meta property="og:image" content="/assets/images/bullwinkle-org/bullwinkle_and_friends_px.png"/>
@@ -45,68 +46,90 @@
 
   <!-- GITHUB -->
   <script>
-      window.GITHUB = JSON.parse({{ site.github | jsonify }});
+      window.GITHUB = JSON.parse('{{ site.github | jsonify }}');
       console.log(window.GITHUB);
   </script>
   <!-- END GITHUB -->
 
   <!-- APP -->
-  <script src="/assets/js/bwk-store.js">
+  <script>
+      window.BWKStore = (() => {
+          const THEMES_CONFIG = JSON.parse('{{ site.data.themes | jsonify }}');
+          const THEMES = THEMES_CONFIG.THEMES;
+          const DEFAULT_THEME = THEMES_CONFIG.DEFAULT_THEME;
+
+          const THEME_KEY = 'BWK-theme';
+
+          const read = (key) => localStorage.getItem(key);
+          const write = (key, value) => localStorage.setItem(key, value);
+
+          const setTheme = theme => {
+              document.body.dataset.siteTheme = theme;
+              write(THEME_KEY, theme);
+
+              return theme;
+          };
+          const getTheme = () => read(THEME_KEY);
+
+          return {THEMES, THEME_KEY, setTheme, read, write, currentTheme: setTheme(getTheme() || DEFAULT_THEME) };
+      })();
+  </script>
   <!-- END APP -->
 
   <!-- NETLIFY -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"/>
   <!-- END NETLIFY -->
 </head>
-<body class="site-root row-vertical" data-site-theme="light">
-  <header class="site-header layout-block row col-auto" style="align-items: center;">
-    <div class="col">{% include navigation.html %}</div>
+<body class="site-root row-vertical" data-site-theme="{{ site.data.themes.DEFAULT_THEME }}">
+<header class="site-header layout-block row col-auto" style="align-items: center;">
+  <div class="col">{% include navigation.html %}</div>
 
-    <div class="col-auto">
-      <a href="/admin/">Admin</a>
-    </div>
-
-    <div class="col-auto" style="margin-left: 60px;">
-      <form
-          name="bwkThemeForm"
-          onchange="window.BWKStore.setTheme(this.bwkTheme.value)"
-          action="javascript:void(0)"
-      >
-        <label style="cursor:pointer;"><input type="radio" name="bwkTheme" id="bwk-theme-light" value="light">light</label><br>
-        <label style="cursor:pointer;"><input type="radio" name="bwkTheme" id="bwk-theme-dark" value="dark"> dark</label>
-      </form>
-
-      <script>window.bwkThemeForm.bwkTheme.value = BWKStore.currentTheme;</script>
-    </div>
-  </header>
-
-  <div class="site-content layout-block col">
-    {{ content }}
+  <div class="col-auto">
+    <a href="/admin/">Admin</a>
   </div>
 
-  <h4>Site.github</h4>
+  <div class="col-auto" style="margin-left: 60px;">
+    <form
+        name="bwkThemeForm"
+        onchange="window.BWKStore.setTheme(this.bwkTheme.value)"
+        action="javascript:void(0)"
+    >
+      <label style="cursor:pointer;"><input type="radio" name="bwkTheme" id="bwk-theme-light"
+                                            value="light">light</label><br>
+      <label style="cursor:pointer;"><input type="radio" name="bwkTheme" id="bwk-theme-dark" value="dark"> dark</label>
+    </form>
 
-  {% highlight json-docs %}
+    <script>window.bwkThemeForm.bwkTheme.value = BWKStore.currentTheme;</script>
+  </div>
+</header>
 
-  {{ site.github | jsonify }}
+<div class="site-content layout-block col">
+  {{ content }}
+</div>
 
-  {% endhighlight %}
+<h4>Site.github</h4>
 
-  <footer class="site-footer layout-block col-auto">
-    {% include navigation.html %}
-  </footer>
+{% highlight json-docs %}
 
-  <!-- NETLIFY -->
-  <script>
+{{ site.github | jsonify }}
+
+{% endhighlight %}
+
+<footer class="site-footer layout-block col-auto">
+  {% include navigation.html %}
+</footer>
+
+<!-- NETLIFY -->
+<script>
     if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-            window.netlifyIdentity.on("login", () => {
-                document.location.href = "/admin/";
-            });
-        }
-      });
+        window.netlifyIdentity.on("init", user => {
+            if (!user) {
+                window.netlifyIdentity.on("login", () => {
+                    document.location.href = "/admin/";
+                });
+            }
+        });
     }
-  </script>
+</script>
 </body>
 </html>
