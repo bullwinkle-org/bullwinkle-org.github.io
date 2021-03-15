@@ -1,3 +1,5 @@
+#!/bin/liquid
+
 <!doctype html>
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 <head>
@@ -15,8 +17,8 @@
   <!-- SEO -->
   <meta name="robots" content="noindex">
   <meta
-    name="keywords"
-    content="frontend, web development, bullwinkle and friends, blog, portfolio, github pages, static site, jekyll"
+      name="keywords"
+      content="frontend, web development, bullwinkle and friends, blog, portfolio, github pages, static site, jekyll"
   >
   {% seo %}
   <meta property="og:type" content="website"/>
@@ -42,252 +44,76 @@
   <link rel="stylesheet" href="/assets/css/styles.css">
   <link rel="stylesheet" href="/assets/css/theme-light.css">
   <link rel="stylesheet" href="/assets/css/theme-dark.css">
+
+  <link rel="stylesheet" href="/assets/css/code-highlight.css">
   <!-- END MAIN STYLES -->
+
+  <!-- GITHUB -->
+  <script>
+      window.GITHUB = JSON.parse({{ site.github | jsonify }});
+      console.log(window.GITHUB);
+  </script>
+  <!-- END GITHUB -->
+
+  <!-- APP -->
+  <script src="/assets/js/bwk-store.js">
+  <!-- END APP -->
 
   <!-- NETLIFY -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <!-- END NETLIFY -->
 </head>
 <body class="site-root row-vertical" data-site-theme="light">
-  <script>
-    window.BWKStore = (() => {
-      const read  = (key) => localStorage.getItem(key);
-      const write = (key, value) => localStorage.setItem(key, value);
 
-      const THEMES    = {
-        LIGHT: 'light',
-        DARK: 'dark',
-      };
-      const THEME_KEY = 'BWK-theme';
+<header class="site-header layout-block row col-auto" style="align-items: center;">
+  <div class="col">{% include navigation.html %}</div>
 
-      const setTheme = theme => {
-        document.body.dataset.siteTheme = theme;
-        write(THEME_KEY, theme);
+  <div class="col-auto">
+    <a href="/admin/">Admin</a>
+  </div>
 
-        return theme;
-      };
-
-      const getTheme = () => read(THEME_KEY);
-
-      const currentTheme = setTheme(getTheme() || THEMES.LIGHT);
-
-      return {
-        THEMES, THEME_KEY,
-        currentTheme,
-        setTheme,
-        read, write,
-      };
-    })();
-  </script>
-
-  <header class="site-header layout-block row col-auto" style="align-items: center;">
-    <div class="col">{% include navigation.html %}</div>
-
-    <div class="col-auto">
-      <a href="/admin/">Admin</a>
-    </div>
-
-    <div class="col-auto" style="margin-left: 60px;">
-      <form
+  <div class="col-auto" style="margin-left: 60px;">
+    <form
         name="bwkThemeForm"
         onchange="window.BWKStore.setTheme(this.bwkTheme.value)"
         action="javascript:void(0)"
-      >
-        <label style="cursor:pointer;"><input type="radio" name="bwkTheme" id="bwk-theme-light" value="light">
-          light</label><br>
-        <label style="cursor:pointer;"><input type="radio" name="bwkTheme" id="bwk-theme-dark" value="dark"> dark</label>
-      </form>
+    >
+      <label style="cursor:pointer;"><input type="radio" name="bwkTheme" id="bwk-theme-light" value="light">
+        light</label><br>
+      <label style="cursor:pointer;"><input type="radio" name="bwkTheme" id="bwk-theme-dark" value="dark"> dark</label>
+    </form>
 
-      <script>window.bwkThemeForm.bwkTheme.value = BWKStore.currentTheme;</script>
-    </div>
-  </header>
-
-  <div class="site-content layout-block col">
-    {{ content }}
+    <script>window.bwkThemeForm.bwkTheme.value = BWKStore.currentTheme;</script>
   </div>
+</header>
 
-  #### Site.github
-  <pre class="debug" style="max-width: 100%; overflow: auto;">
-    {% highlight json %}
+<div class="site-content layout-block col">
+  {{ content }}
+</div>
 
-    {{ site.github | jsonify }}
+<h4>Site.github</h4>
 
-    {% endhighlight %}
-  </pre>
+{% highlight json-docs %}
 
-  #### Site.url
-  <pre class="debug">
-    {{ site.url }}
-  </pre>
+{{ site.github | jsonify }}
 
-  #### Site.time
-  <pre class="debug">
-    {{ site.time }}
-  </pre>
+{% endhighlight %}
 
-  <script>
-    window.GITHUB = {{site.github | jsonify}};
-    console.log(window.GITHUB);
-  </script>
+<footer class="site-footer layout-block col-auto">
+  {% include navigation.html %}
+</footer>
 
-  #### Site.categories (TODO: create category-content page)
-  <nav class="">
-    <ul>
-      {% for category in site.categories %}
-      <li>
-        {{ category[0] }} ({{ category[1].size }})
-      </li>
-      {% endfor %}
-    </ul>
-  </nav>
-
-
-  #### Site.tags (TODO: create tag-content page)
-  <nav class="">
-    <ul>
-      {% for tag in site.tags %}
-      <li>
-        {{ tag[0] }} ({{ tag[1].size }})
-      </li>
-      {% endfor %}
-    </ul>
-  </nav>
-
-
-  #### Site.collections (TODO: create collection-content page)
-  <nav class="">
-    <ul>
-      {% for collection in site.collections %}
-      <li>
-        {{ collection.label }} ({{ collection.relative_directory }})
-      </li>
-      {% endfor %}
-    </ul>
-  </nav>
-
-  #### Site.pages
-  <nav class="">
-    <ul>
-      {% for page in site.pages %}
-      <li>
-        <a
-          href="{{ page.url }}"
-          class="link">
-          {{ page.title }}
-        </a> ({{ page.path }})
-      </li>
-      {% endfor %}
-    </ul>
-  </nav>
-
-
-  #### Site.documents
-  <nav class="">
-    <ul>
-      {% for document in site.documents %}
-      <li>
-        <a
-          href="{{ document.url }}"
-          class="link">
-          {{ document.title }}
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
-  </nav>
-
-
-  #### Site.posts
-  <nav class="">
-    <ul>
-      {% for post in site.posts %}
-      <li>
-        <a
-          href="{{ post.url }}"
-          class="link">
-          {{ post.title }}
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
-  </nav>
-
-
-  #### Site.related Posts
-  <nav class="">
-    <ul>
-      {% for post in site.related_posts %}
-      <li>
-        <a
-          href="{{ post.url }}"
-          class="link">
-          {{ post.title }}
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
-  </nav>
-
-  #### Site.static_files
-  <nav class="">
-    <ul>
-      {% for file in site.static_files %}
-      <li>
-        <a
-          href="{{ file.path }}"
-          class="link">
-          {{ file.name }}
-        </a> ({{ file.path }}, {{file.modified_time | date_to_long_rfc822 }})
-      </li>
-      {% endfor %}
-    </ul>
-  </nav>
-
-  #### Site.html_pages
-  <nav class="">
-    <ul>
-      {% for page in site.html_pages %}
-      <li>
-        <a
-          href="{{ page.url }}"
-          class="link">
-          {{ page.title }}
-        </a> ({{ page.path }})
-      </li>
-      {% endfor %}
-    </ul>
-  </nav>
-
-  #### Site.html_files
-  <nav class="">
-    <ul>
-      {% for file in site.html_files %}
-      <li>
-        <a
-          href="{{ file.url }}"
-          class="link">
-          {{ file.name }} {{ file.title }}
-        </a> ({{ file.path }})
-      </li>
-      {% endfor %}
-    </ul>
-  </nav>
-
-  <footer class="site-footer layout-block col-auto">
-    {% include navigation.html %}
-  </footer>
-
-  <!-- NETLIFY -->
-  <script>
+<!-- NETLIFY -->
+<script>
     if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
+        window.netlifyIdentity.on("init", user => {
+            if (!user) {
+                window.netlifyIdentity.on("login", () => {
+                    document.location.href = "/admin/";
+                });
+            }
+        });
     }
-  </script>
+</script>
 </body>
 </html>
