@@ -69,7 +69,7 @@
           };
           const getTheme = () => read(THEME_KEY);
 
-          return {THEMES, THEME_KEY, setTheme, read, write, currentTheme: setTheme(getTheme() || DEFAULT_THEME) };
+          return {THEMES, THEME_KEY, currentTheme: DEFAULT_THEME, setTheme, getTheme, read, write};
       })();
   </script>
   <!-- END APP -->
@@ -79,6 +79,10 @@
   <!-- END NETLIFY -->
 </head>
 <body class="site-root row-vertical" data-site-theme="{{ site.data.themes.DEFAULT_THEME }}">
+<script>
+    const BWKStore = window.BWKStore;
+    BWKStore.setTheme(BWKStore.getTheme());
+</script>
 <header class="site-header layout-block row col-auto" style="align-items: center;">
   <div class="col">{% include navigation.html %}</div>
 
