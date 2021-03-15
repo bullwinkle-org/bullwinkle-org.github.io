@@ -52,7 +52,7 @@
   <!-- APP -->
   <script>
       window.BWKStore = (() => {
-          const THEMES_CONFIG = JSON.parse('{{ site.data.themes | jsonify }}');
+          const THEMES_CONFIG = {{ site.data.themes | jsonify }};
           const THEMES = THEMES_CONFIG.THEMES;
           const DEFAULT_THEME = THEMES_CONFIG.DEFAULT_THEME;
 
