@@ -44,7 +44,7 @@
 
   <!-- GITHUB -->
   <script>
-      window.GITHUB = JSON.parse('{{ site.github | jsonify }}');
+      window.GITHUB = {{ site.github | jsonify }};
       console.log(window.GITHUB);
   </script>
   <!-- END GITHUB -->
