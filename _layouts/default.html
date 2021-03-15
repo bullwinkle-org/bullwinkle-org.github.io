@@ -111,7 +111,15 @@
 
 <h4>Site.github</h4>
 
-{% highlight json-docs %}
+{% highlight json linenos %}
+
+{{ site.github | jsonify }}
+
+{% endhighlight %}
+
+<div>========================</div>
+
+{% highlight js linenos %}
 
 {{ site.github | jsonify }}
 
