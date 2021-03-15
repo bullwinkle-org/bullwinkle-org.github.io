@@ -111,19 +111,13 @@
 
 <h4>Site.github</h4>
 
-{% highlight json linenos %}
+<div class="debug" style="width: 100%; overflow: auto; max-width: 100%;">
+  {% highlight json linenos %}
 
-{{ site.github | jsonify }}
+  {{ site.github | jsonify }}
 
-{% endhighlight %}
-
-<div>========================</div>
-
-{% highlight js linenos %}
-
-{{ site.github | jsonify }}
-
-{% endhighlight %}
+  {% endhighlight %}
+</div>
 
 <footer class="site-footer layout-block col-auto">
   {% include navigation.html %}
