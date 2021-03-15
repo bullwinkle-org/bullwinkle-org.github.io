@@ -104,15 +104,23 @@
         {{ content }}
     </div>
 
-    <div class="debug">
-      #### Site.url
-      {{ site.url }}
+    #### Site.github
+    <pre class="debug">
+      {% highlight json linenos %}
 
-      #### Site.time
-      {{ site.time }}
-
-      #### Site.github
       {{ site.github | jsonify }}
+
+      {% endhighlight %}
+    </pre>
+
+      #### Site.url
+    <pre class="debug">
+      {{ site.url }}
+    </pre>
+      #### Site.time
+    <pre class="debug">
+      {{ site.time }}
+    </pre>
 
       <script>
         window.GITHUB = {{ site.github | jsonify }};
@@ -317,7 +325,7 @@
         </ul>
       </nav>
 
-    </div>
+    </pre>
 
     <footer class="site-footer layout-block col-auto">
         {% include navigation.html %}
