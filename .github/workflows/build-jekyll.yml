@@ -11,8 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Pull LFS
-        run: "git -c filter.lfs.smudge= -c filter.lfs.required=false pull && git lfs pull"
+#       - name: Pull LFS
+#         run: "git -c filter.lfs.smudge= -c filter.lfs.required=false pull && git lfs pull"
 
       # Use GitHub Actions' cache to cache dependencies on servers
       - uses: actions/cache@v2
