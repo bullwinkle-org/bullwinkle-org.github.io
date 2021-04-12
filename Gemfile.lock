@@ -288,9 +288,11 @@ DEPENDENCIES
   dotenv
   github-pages
   jekyll
-  jekyll-admin
+  jekyll-admin (>= 0.11.0)
   jekyll-datapage-generator
   jekyll-pwa-plugin
+  rack (>= 1.6)
+  sinatra (>= 1.4)
 
 BUNDLED WITH
    2.1.4
