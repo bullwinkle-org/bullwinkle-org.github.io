@@ -1,13 +1,13 @@
-title: Bullwinkle and friends
+title: 'Bullwinkle and friends'
 # theme: jekyll-theme-minimal
 # remote_theme: ItsMeaga1n/minimal-categorized
-subtitle: "Public space"
-description: "Bullwinkle-org's public space for blog, portfolio, static content and experiments."
-share: "Bullwinkle and friends public space"
-repository: bullwinkle-org/bullwinkle-org.github.io
-url: https://bullwinkle.space
+subtitle: 'Public space'
+description: 'Bullwinkle-org`s public space for blog, portfolio, static content and experiments.'
+share: 'Bullwinkle and friends public space'
+repository: 'bullwinkle-org/bullwinkle-org.github.io'
+url: 'https://bullwinkle.space'
 
-collections_dir: collections
+collections_dir: 'collections'
 
 collections:
   authors:
@@ -15,29 +15,29 @@ collections:
 
 defaults:
   - scope:
-      path: ""
-      type: "authors"
+      path: ''
+      type: 'authors'
     values:
-      layout: "author"
+      layout: 'author'
 
   - scope:
-      path: ""
-      type: "posts"
+      path: ''
+      type: 'posts'
     values:
-      layout: "post"
+      layout: 'post'
 
   - scope:
-      path: ""
+      path: ''
     values:
-      layout: "default"
+      layout: 'default'
 
-#lsi: true
-permalink: /blog/:categories/:year/:month/:day/:title/
+lsi: true
+permalink: '/blog/:categories/:year/:month/:day/:title/'
 page_excerpts: true
 #pages_dir: pages
 
 sass:
-  style: compressed
+  style: 'compressed'
 
 plugins:
   - jekyll-sitemap
@@ -45,8 +45,8 @@ plugins:
   - jekyll-seo-tag
   - jekyll-paginate-v2
   - jekyll-datapage-generator
-# - jekyll-pwa-plugin
-# - jekyll-manager
+  - jekyll-pwa-plugin
+  - jekyll-admin
 
 livereload: true
 
@@ -114,15 +114,15 @@ pagination:
 
 pwa:
   enabled: true # Optional
-  sw_src_filepath: service-worker.js # Optional
-  sw_dest_filename: service-worker.js # Optional
-  dest_js_directory: assets/js # Required
+  sw_src_filepath: 'service-worker.js' # Optional
+  sw_dest_filename: 'service-worker.js' # Optional
+  dest_js_directory: 'assets/js' # Required
   precache_recent_posts_num: 10 # Optional
-  precache_glob_directory: / # Optional
+  precache_glob_directory: '/' # Optional
   precache_glob_patterns: # Optional
-    - index.html
-    - "assets/{js,css,fonts,uploads}/**/*.{js,css,eot,svg,png,jpg,ttf,woff,mov}"
-    - "{about,authors,blog,experiments}/**/*.html"
+    - 'index.html'
+    - 'assets/{js,css,fonts,uploads}/**/*.{js,css,eot,svg,png,jpg,ttf,woff,mov}'
+    - '{about,authors,blog,experiments}/**/*.html'
   precache_glob_ignores: # Optional
-    - sw-register.js
-    - "fonts/**/*"
+    - 'sw-register.js'
+    - 'fonts/**/*'
