@@ -9,7 +9,7 @@ gem "jekyll"
 # gem "kramdown-parser-gfm"
 
 group :jekyll_plugins do
-    gem 'github-pages'
+    gem 'github-pages', '214'
     gem 'jekyll-sitemap'
     gem 'jekyll-feed'
     gem 'jekyll-seo-tag'
