@@ -56,16 +56,19 @@
 
       const getTheme = () => read(THEME_KEY);
       const setTheme = theme => {
-        window.document?.body?.dataset?.[THEME_KEY] = theme;
         write(THEME_KEY, theme);
-
+        Object.assign(window.document?.body?.dataset ?? {}, {[THEME_KEY]: theme})
         return theme;
       };
 
       return { THEMES, THEME_KEY, DEFAULT_THEME, setTheme, getTheme, read, write };
     })();
 
-    document.addEventListener('DOMContentLoaded', () => BWKStore.setTheme(BWKStore.getTheme()));
+    document.addEventListener('DOMContentLoaded', () => {
+      const currentTheme = BWKStore.getTheme();
+      BWKStore.setTheme(currentTheme);
+      Object.assign(window.bwkThemeForm?.bwkTheme?.value ?? {}, {value: currentTheme})
+    });
   </script>
   <!-- END APP -->
 </head>
