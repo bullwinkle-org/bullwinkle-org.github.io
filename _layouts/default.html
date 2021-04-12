@@ -67,13 +67,14 @@
     document.addEventListener('DOMContentLoaded', () => {
       const currentTheme = BWKStore.getTheme();
       BWKStore.setTheme(currentTheme);
-      Object.assign(window.bwkThemeForm?.bwkTheme?.value ?? {}, {value: currentTheme})
+      Object.assign(window.bwkThemeForm?.bwkTheme ?? {}, {value: currentTheme})
     });
   </script>
   <!-- END APP -->
 </head>
   
-<body class="site-root row-vertical" data-site-theme="{{ site.data.themes.DEFAULT_THEME }}">
+<body class="site-root row-vertical" data-{{ site.data.themes.THEME_KEY }}="{{ site.data.themes.DEFAULT_THEME }}">
+<script>BWKStore.setTheme(BWKStore.getTheme());</script>  
   
 <header class="site-header layout-block row col-auto" style="align-items: center;">
   <div class="col">{% include navigation.html %}</div>
