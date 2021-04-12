@@ -3,3 +3,5 @@ THEMES:
   DARK: 'dark'
 
 DEFAULT_THEME: *default
+
+THEME_KEY: 'siteTheme';
