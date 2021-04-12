@@ -57,7 +57,7 @@
       const getTheme = () => read(THEME_KEY);
       const setTheme = theme => {
         write(THEME_KEY, theme);
-        Object.assign(window.document?.body?.dataset ?? {}, {[THEME_KEY]: theme})
+        Object.assign(window.document?.body?.dataset ?? {}, {[ {{ site.data.themes.THEME_KEY | camelcase }} ]: theme})
         return theme;
       };
 
