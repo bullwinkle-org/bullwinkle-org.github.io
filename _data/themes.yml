@@ -4,4 +4,4 @@ THEMES:
 
 DEFAULT_THEME: *default
 
-THEME_KEY: 'bwk-site-theme'
+THEME_KEY: 'bwk_site_theme'
