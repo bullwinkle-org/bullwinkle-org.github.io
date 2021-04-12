@@ -42,47 +42,37 @@
   <link rel="stylesheet" href="/assets/css/theme-dark.css">
   <!-- END MAIN STYLES -->
 
-  <!-- GITHUB -->
-  <script>
-      window.GITHUB = {{ site.github | jsonify }};
-      console.log(window.GITHUB);
-  </script>
-  <!-- END GITHUB -->
+  <!-- NETLIFY -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <!-- END NETLIFY -->
 
   <!-- APP -->
   <script>
-      window.BWKStore = (() => {
-          const THEMES_CONFIG = {{ site.data.themes | jsonify }};
-          const THEMES = THEMES_CONFIG.THEMES;
-          const DEFAULT_THEME = THEMES_CONFIG.DEFAULT_THEME;
+    const BWKStore = window.BWKStore = (() => {
+      const { THEMES, DEFAULT_THEME } = { 'THEMES': { 'LIGHT': 'light', 'DARK': 'dark' }, 'DEFAULT_THEME': 'light' };
+      const THEME_KEY = 'siteTheme';
 
-          const THEME_KEY = 'BWK-theme';
+      const read = (key) => localStorage?.getItem(key);
+      const write = (key, value) => localStorage?.setItem(key, value);
 
-          const read = (key) => localStorage.getItem(key);
-          const write = (key, value) => localStorage.setItem(key, value);
+      const getTheme = () => read(THEME_KEY);
+      const setTheme = theme => {
+        window.document?.body?.dataset?.[THEME_KEY] = theme;
+        write(THEME_KEY, theme);
 
-          const setTheme = theme => {
-              document.body.dataset.siteTheme = theme;
-              write(THEME_KEY, theme);
+        return theme;
+      };
 
-              return theme;
-          };
-          const getTheme = () => read(THEME_KEY);
+      return { THEMES, THEME_KEY, DEFAULT_THEME, setTheme, getTheme, read, write };
+    })();
 
-          return {THEMES, THEME_KEY, currentTheme: DEFAULT_THEME, setTheme, getTheme, read, write};
-      })();
+    document.addEventListener('DOMContentLoaded', () => BWKStore.setTheme(BWKStore.getTheme()));
   </script>
   <!-- END APP -->
-
-  <!-- NETLIFY -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"/>
-  <!-- END NETLIFY -->
 </head>
+  
 <body class="site-root row-vertical" data-site-theme="{{ site.data.themes.DEFAULT_THEME }}">
-<script>
-    const BWKStore = window.BWKStore;
-    BWKStore.setTheme(BWKStore.getTheme());
-</script>
+  
 <header class="site-header layout-block row col-auto" style="align-items: center;">
   <div class="col">{% include navigation.html %}</div>
 
@@ -135,5 +125,14 @@
         });
     }
 </script>
+  
+<!-- GITHUB -->
+<script>
+  (() => {
+    const GITHUB = window.GITHUB = {{ site.github | jsonify }};
+    console.log(GITHUB);
+  })();
+</script>
+<!-- END GITHUB -->  
 </body>
 </html>
