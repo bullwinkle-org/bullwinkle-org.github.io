@@ -67,7 +67,7 @@
     document.addEventListener('DOMContentLoaded', () => {
       const currentTheme = BWKStore.getTheme();
       BWKStore.setTheme(currentTheme);
-      Object.assign(window.bwkThemeForm?.{{ site.data.themes.THEME_KEY }} ?? {}, {value: currentTheme})
+      Object.assign(window.bwkThemeForm?.[BWKStore.THEME_KEY] ?? {}, {value: currentTheme})
     });
   </script>
   <!-- END APP -->
@@ -86,7 +86,7 @@
   <div class="col-auto" style="margin-left: 60px;">
     <form
         name="bwkThemeForm"
-        onchange="window.BWKStore.setTheme(this.{{ site.data.themes.THEME_KEY }}.value)"
+        onchange="BWKStore.setTheme(this['{{ site.data.themes.THEME_KEY }}'].value)"
         action="javascript:void(0)"
     >
       <label style="cursor:pointer;"><input type="radio" name="{{ site.data.themes.THEME_KEY }}" id="bwk-theme-light"
