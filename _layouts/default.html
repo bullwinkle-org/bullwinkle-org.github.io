@@ -74,7 +74,15 @@
 </head>
   
 <body class="site-root row-vertical" data-{{ site.data.themes.THEME_KEY }}="{{ site.data.themes.DEFAULT_THEME }}">
-<script>BWKStore.setTheme(BWKStore.getTheme());</script>  
+<script>
+  (()=>{
+    const currentTheme = BWKStore.getTheme();
+
+    if (currentTheme) {
+      BWKStore.setTheme(currentTheme);
+    }
+  })()
+</script>  
   
 <header class="site-header layout-block row col-auto" style="align-items: center;">
   <div class="col">{% include navigation.html %}</div>
