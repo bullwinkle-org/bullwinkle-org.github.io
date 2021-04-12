@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/boris-badenov/jekyll.git
-  revision: f1dfc34b109cb9dcccf564dfb2a84f5bfc7a9dea
+  revision: ac91e0d37ddbf268d25b631d49a7767dccfc7d16
   specs:
     jekyll (3.9.0)
       addressable (~> 2.4)
