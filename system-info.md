@@ -9,14 +9,6 @@ title: System info
 ## Site.time
 {{ site.time }}
 
-## Site.github
-{{ site.github | jsonify }}
-
-<script>
-  window.GITHUB = {{ site.github | jsonify }};
-  console.log(window.GITHUB);
-</script>
-
 ## Site.categories (TODO: create category-content page)
 <nav class="">
     <ul>
@@ -214,3 +206,10 @@ title: System info
       {% endfor %}
     </ul>
 </nav>
+
+==========================
+
+<script>
+  window.GITHUB = {{ site.github | jsonify }};
+  console.log(window.GITHUB);
+</script>
