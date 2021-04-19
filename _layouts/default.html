@@ -78,6 +78,8 @@
   (()=>{
     const currentTheme = BWKStore.getTheme();
 
+    console.info('theme:', currentTheme);
+    
     if (currentTheme) {
       BWKStore.setTheme(currentTheme);
     }
@@ -93,6 +95,7 @@
 
   <div class="col-auto" style="margin-left: 60px;">
     <form
+        id="bwkThemeForm"  
         name="bwkThemeForm"
         onchange="BWKStore.setTheme(this['{{ site.data.themes.THEME_KEY }}'].value)"
         action="javascript:void(0)"
@@ -101,6 +104,9 @@
                                             value="light">light</label><br>
       <label style="cursor:pointer;"><input type="radio" name="{{ site.data.themes.THEME_KEY }}" id="bwk-theme-dark" value="dark"> dark</label>
     </form>
+    <script>
+      (()=> bwkThemeForm['{{ site.data.themes.THEME_KEY }}'].value = BWKStore.getTheme() )()
+    </script> 
   </div>
 </header>
 
