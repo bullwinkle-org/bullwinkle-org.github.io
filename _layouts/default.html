@@ -54,7 +54,7 @@
       const read = (key) => localStorage?.getItem(key);
       const write = (key, value) => localStorage?.setItem(key, value);
 
-      const getTheme = () => read(THEME_KEY);
+      const getTheme = () => read(THEME_KEY) || DEFAULT_THEME;
       const setTheme = theme => {
         write(THEME_KEY, theme);
         Object.assign(window.document?.body?.dataset ?? {}, {[ THEME_KEY ]: theme})
@@ -80,7 +80,7 @@
 
     console.info('theme:', currentTheme);
     
-    if (currentTheme) {
+    if (currentTheme !== BWKStore.DEFAULT_THEME) {
       BWKStore.setTheme(currentTheme);
     }
   })()
