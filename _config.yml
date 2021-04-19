@@ -31,7 +31,7 @@ defaults:
     values:
       layout: 'default'
 
-lsi: true
+# lsi: true
 permalink: '/blog/:categories/:year/:month/:day/:title/'
 page_excerpts: true
 #pages_dir: pages
@@ -122,7 +122,7 @@ pwa:
   precache_glob_patterns: # Optional
     - 'index.html'
     - 'assets/{js,css,fonts,uploads}/**/*.{js,css,eot,svg,png,jpg,ttf,woff,mov}'
-    - '{about,authors,blog,experiments}/**/*.html'
+    - '**/*.html'
   precache_glob_ignores: # Optional
     - 'sw-register.js'
     - 'fonts/**/*'
