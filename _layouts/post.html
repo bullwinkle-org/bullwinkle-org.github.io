@@ -8,7 +8,7 @@ layout: default
 <p>
 	{{ page.date | date_to_string }}
 
-	{% assign author = site.authors | find: 'short_name', page.author %}
+	{% assign author = site.authors | where: 'short_name', page.author | first %}
 	{% if author %}
 	- <a href="{{ author.url }}" title="{{ author | jsonify }}">{{ author.name || page.author }}</a>
 	{% else %}
