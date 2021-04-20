@@ -25,6 +25,9 @@ jobs:
       # Use GitHub Deploy Action to build and deploy to Github
       - name: Jekyll Deploy Action
         uses: jeffreytse/jekyll-deploy-action@v0.1.4
+        env:
+          JEKYLL_GITHUB_TOKEN: ${{ secrets.JEKYLL_GITHUB_TOKEN }}
+          JEKYLL_ENV: 'production'          
         with:
           provider: 'github'
           token: ${{ secrets.JEKYLL_GITHUB_TOKEN }}
