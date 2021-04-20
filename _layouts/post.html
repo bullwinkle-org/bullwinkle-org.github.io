@@ -10,7 +10,7 @@ layout: default
 
 	{% assign author = site.authors | find: 'short_name', page.author %}
 	{% if author %}
-	- <a href="{{ author.url }}">{{ author.name }}</a>
+	- <a href="{{ author.url }}" title="{{ author | jsonify }}">{{ author.name || page.author }}</a>
 	{% else %}
 	- {{ page.author }}
 	{% endif %}
