@@ -5,6 +5,8 @@ subtitle: 'Public space'
 description: 'Bullwinkle-org`s public space for blog, portfolio, static content and experiments.'
 share: 'Bullwinkle and friends public space'
 repository: 'bullwinkle-org/bullwinkle-org.github.io'
+github: [metadata]
+
 url: 'https://bullwinkle.space'
 
 collections_dir: 'collections'
