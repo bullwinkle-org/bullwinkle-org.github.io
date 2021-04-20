@@ -9,7 +9,7 @@ layout: default
 	{{ page.date | date_to_string }}
 
 	{% assign author = site.authors | where: 'short_name', page.author | first %}
-	- <a href="{{ author.url }}" title="{{ author | jsonify }}">{{ author.name }} ({{ page.author }})</a>
+	- <a href="{{ author.url }}">{{ author.name }} ({{ page.author }})</a>
 </p>
 
 {{ content }}
