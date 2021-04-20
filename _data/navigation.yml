@@ -10,6 +10,15 @@
 - name: Authors
   link: /authors/
 
+- name: Products
+  link: /products/
+  
+- name: Categories
+  link: /categories/
+  
+- name: Notes
+  link: /notes/
+
 - name: System info
   link: /system-info/
 
