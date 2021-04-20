@@ -15,6 +15,9 @@ collections:
   authors:
     output: true
 
+  categories:
+    output: true
+
 defaults:
   - scope:
       path: ''
