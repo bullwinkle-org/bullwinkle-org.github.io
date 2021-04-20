@@ -18,3 +18,4 @@
 
 - name: Admin
   link: https://bullwinkle-org.netlify.app/admin/
+  target: '_blank'
