@@ -31,7 +31,7 @@ collections:
 
   - name: 'pages'
     label: 'Pages'
-    label_singular: "Page"
+    label_singular: "page"
     editor:
       preview: false
     files:
@@ -52,7 +52,7 @@ collections:
 
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
-    label_singular: "Post"
+    label_singular: "post"
     folder: "collections/_posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
@@ -97,7 +97,7 @@ collections:
 
   - name: "authors"
     label: "Authors"
-    label_singular: "Author"
+    label_singular: "author"
     folder: "collections/_authors"
     create: true
     slug: "{{slag}}"
@@ -111,7 +111,7 @@ collections:
 
   - name: "notes"
     label: "Notes"
-    label_singular: "Note"
+    label_singular: "note"
     folder: "collections/_notes"
     create: true
     slug: "{{slug}}"
@@ -124,7 +124,7 @@ collections:
 
   - name: "products"
     label: "Products"
-    label_singular: "Product"
+    label_singular: "product"
     folder: "collections/_products"
     create: true
     slug: "{{slug}}"
@@ -160,8 +160,8 @@ collections:
       - { label: "Description", name: "description", widget: "markdown" }
 
   - name: "categories"
-    label: "categories"
-    label_singular: "Category"
+    label: "Categories"
+    label_singular: "category"
     folder: "collections/_categories"
     create: true
     slug: "{{slug}}"
@@ -174,7 +174,7 @@ collections:
 
   - name: "tags"
     label: "Tags"
-    label_singular: "Tag"
+    label_singular: "tag"
     folder: "collections/_tags"
     create: true
     slug: "{{slug}}"
