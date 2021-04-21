@@ -182,4 +182,4 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "Slug", name: "slug", widget: "string", required: false }
-      - - { label: "Description", name: "content", widget: "markdown", required: false }
+      - { label: "Description", name: "content", widget: "markdown", required: false }
