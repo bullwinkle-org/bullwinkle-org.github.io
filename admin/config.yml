@@ -27,7 +27,7 @@ collections:
             fields:
               - {label: Name, name: name, widget: string}
               - {label: Link, name: link, widget: string}
-              - {label: Target, name: target, widget: select, options: ['_self', '_blank', 'top', 'parent']}
+              - {label: Target, name: target, widget: select, options: ['_self', '_blank', 'top', 'parent'], default: '_self' }
 
   - name: 'pages'
     label: 'Pages'
