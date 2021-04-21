@@ -119,7 +119,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "Slug", name: "slug", widget: "string", required: true }
-      - { label: "Preview", name: "preview", widget: "image" }
+      - { label: "Preview", name: "preview", widget: "image", required: false }
       - { label: "Content", name: "content", widget: "markdown" }
 
   - name: "products"
