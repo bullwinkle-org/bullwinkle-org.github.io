@@ -1,40 +1,30 @@
 items:
   - name: Home
     link: /
-
   - name: About
     link: /pages/about/
-
   - name: Blog
     link: /blog/
-
   - name: Authors
     link: /pages/authors/
-
   - name: Products
     link: /pages/products/
-
   - name: Categories
     link: /pages/categories/
-
   - name: Notes
     link: /pages/notes/
-
   - name: Tags
     link: /pages/tags/
-
   - name: Categories
     link: /pages/categories/
-
   - name: Collections
     link: /pages/collections/
-
   - name: System info
     link: /pages/system-info/
-
   - name: Experiments
     link: /pages/experiments/
-
   - name: Admin
     link: https://bullwinkle-org.netlify.app/admin/
-    target: '_blank'
+    target: _blank
+  - name: new
+    link: /new
