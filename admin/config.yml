@@ -66,9 +66,9 @@ collections:
         name: "author",
         widget: "relation",
         collection: "authors",
-        search_fields: [ "name","slag","position" ],
-        value_field: "slag",
-        display_fields: [ "{{slag}} ({{name}}) - {{position}}" ],
+        search_fields: [ "name","slug","position" ],
+        value_field: "slug",
+        display_fields: [ "{{slug}} ({{name}}) - {{position}}" ],
         required: true
       }
       - { label: "Body", name: "body", widget: "markdown", required: true }
@@ -100,11 +100,11 @@ collections:
     label_singular: "author"
     folder: "collections/_authors"
     create: true
-    slug: "{{slag}}"
-    identifier_field: slag
+    slug: "{{slug}}"
+    identifier_field: slug
     fields:
-      - { label: "Slag", name: "slag", widget: "string", required: true }
       - { label: "Name", name: "name", widget: "string", required: true }
+      - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Position", name: "position", widget: "string", default: "" }
       - { label: "Avatar", name: "avatar", widget: "image", default: "/uploads/bwk_bot.png" }
       - { label: "Body", name: "body", widget: "markdown", default: "" }
@@ -115,10 +115,10 @@ collections:
     folder: "collections/_notes"
     create: true
     slug: "{{slug}}"
-    identifier_field: slag
+    identifier_field: slug
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "Slug", name: "slug", widget: "string", required: true }
+      - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Preview", name: "preview", widget: "image" }
       - { label: "Content", name: "content", widget: "markdown" }
 
@@ -128,10 +128,10 @@ collections:
     folder: "collections/_products"
     create: true
     slug: "{{slug}}"
-    identifier_field: slag
+    identifier_field: slug
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "Slug", name: "slug", widget: "string", required: true }
+      - { label: "Slug", name: "slug", widget: "string" }
       - {
         label: "Category",
         name: "category",
@@ -165,10 +165,10 @@ collections:
     folder: "collections/_categories"
     create: true
     slug: "{{slug}}"
-    identifier_field: slag
+    identifier_field: slug
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "Slug", name: "slug", widget: "string", required: true }
+      - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Preview", name: "preview", widget: "image" }
       - { label: "Content", name: "content", widget: "markdown" }
 
@@ -178,9 +178,7 @@ collections:
     folder: "collections/_tags"
     create: true
     slug: "{{slug}}"
-    identifier_field: slag
+    identifier_field: slug
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "Slug", name: "slug", widget: "string", required: true }
-      - { label: "Preview", name: "preview", widget: "image" }
-      - { label: "Content", name: "content", widget: "markdown" }
+      - { label: "Slug", name: "slug", widget: "string" }
