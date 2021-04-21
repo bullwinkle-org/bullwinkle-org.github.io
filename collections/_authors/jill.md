@@ -1,5 +1,5 @@
 ---
-short_name: jilljbjhb
+slag: jilljbjhb
 name: Jill Smithjjj
 position: Chief Editorjjj
 ---

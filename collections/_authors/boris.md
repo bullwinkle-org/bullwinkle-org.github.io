@@ -1,6 +1,6 @@
 ---
 name: Boris Badenov
-short_name: boris
+slag: boris
 position: author
 ---
 Something about me, detailed

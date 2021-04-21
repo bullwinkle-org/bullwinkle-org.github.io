@@ -9,7 +9,7 @@ pagination:
   <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
   <p class="author">
     <span class="date">{{ post.date | date_to_string }}</span>
-    {% assign author = site.authors | find: 'short_name', post.author %}
+    {% assign author = site.authors | find: 'slag', post.author %}
     {% if author %}
         - <a href="{{ author.url }}">{{ author.name }}</a>
     {% else %}

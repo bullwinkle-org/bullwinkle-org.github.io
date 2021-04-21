@@ -1,6 +1,6 @@
 ---
 name: Vasiliy Pupkin
-short_name: vasja
+slag: vasja
 position: Director
 avatar: /uploads/bwk_bot.png
 ---

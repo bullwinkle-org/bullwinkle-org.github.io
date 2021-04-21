@@ -1,30 +1,31 @@
-- name: Home
-  link: /
+items:
+  - name: Home
+    link: /
 
-- name: About
-  link: /about/
+  - name: About
+    link: /pages/about/
 
-- name: Blog
-  link: /blog/
+  - name: Blog
+    link: /blog/
 
-- name: Authors
-  link: /authors/
+  - name: Authors
+    link: /pages/authors/
 
-- name: Products
-  link: /products/
-  
-- name: Categories
-  link: /categories/
-  
-- name: Notes
-  link: /notes/
+  - name: Products
+    link: /pages/products/
 
-- name: System info
-  link: /system-info/
+  - name: Categories
+    link: /pages/categories/
 
-- name: Experiments
-  link: /experiments/
+  - name: Notes
+    link: /pages/notes/
 
-- name: Admin
-  link: https://bullwinkle-org.netlify.app/admin/
-  target: '_blank'
+  - name: System info
+    link: /pages/system-info/
+
+  - name: Experiments
+    link: /pages/experiments/
+
+  - name: Admin
+    link: https://bullwinkle-org.netlify.app/admin/
+    target: '_blank'

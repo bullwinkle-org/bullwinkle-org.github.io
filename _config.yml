@@ -12,10 +12,19 @@ url: 'https://bullwinkle.space'
 collections_dir: 'collections'
 
 collections:
+  categories:
+    output: true
+
+  tags:
+    output: true
+
   authors:
     output: true
 
-  categories:
+  notes:
+    output: true
+
+  products:
     output: true
 
 defaults:
@@ -125,8 +134,9 @@ pwa:
   precache_glob_directory: '/' # Optional
   precache_glob_patterns: # Optional
     - 'index.html'
+    - '404.html'
+    - 'manifest.json'
     - 'assets/{js,css,fonts,uploads}/**/*.{js,css,eot,svg,png,jpg,ttf,woff,mov}'
     - '**/*.html'
   precache_glob_ignores: # Optional
     - 'sw-register.js'
-    - 'fonts/**/*'

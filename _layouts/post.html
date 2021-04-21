@@ -8,7 +8,7 @@ layout: default
 <p>
 	{{ page.date | date_to_string }}
 
-	{% assign author = site.authors | where: 'short_name', page.author | first %}
+	{% assign author = site.authors | where: 'slag', page.author | first %}
 	- <a href="{{ author.url }}">{{ author.name }} ({{ page.author }})</a>
 </p>
 
