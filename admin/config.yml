@@ -43,14 +43,7 @@ collections:
           - { label: 'Body', name: 'body', widget: 'markdown' }
       - label: 'Experiments'
         name: 'experiments'
-        file: 'pages/experiments.md'
-        fields:
-          - { label: 'Title', name: 'title', widget: 'hidden', default: 'experiments' }
-          - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'experiments' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
-      - label: 'Experiments'
-        name: 'experiments'
-        file: 'pages/experiments.md'
+        file: 'pages/experiments.html'
         fields:
           - { label: 'Title', name: 'title', widget: 'hidden', default: 'experiments' }
           - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'experiments' }

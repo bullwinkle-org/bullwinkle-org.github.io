@@ -4,7 +4,7 @@
 	"description": "Bullwinkle-org's public space for blog, portfolio, static content and experiments.",
 	"theme_color": "#248ee2",
 	"background_color": "#f0ffff",
-	"start_url": ".",
+	"start_url": "/",
 	"scope": "/",
 	"display": "standalone",
 	"categories": ["blog", "frontend", "github", "web-development", "programming", "github-pages"],
