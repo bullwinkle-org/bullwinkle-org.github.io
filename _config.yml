@@ -55,7 +55,7 @@ defaults:
       path: ''
       type: 'categories'
     values:
-      layout: 'categorie'
+      layout: 'category'
 
   - scope:
       path: ''
