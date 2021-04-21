@@ -104,7 +104,7 @@ collections:
     identifier_field: slug
     fields:
       - { label: "Name", name: "name", widget: "string", required: true }
-      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string", required: false }
       - { label: "Position", name: "position", widget: "string", default: "" }
       - { label: "Avatar", name: "avatar", widget: "image", default: "/uploads/bwk_bot.png" }
       - { label: "Body", name: "body", widget: "markdown", default: "" }
@@ -118,7 +118,7 @@ collections:
     identifier_field: slug
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string", required: false }
       - { label: "Preview", name: "preview", widget: "image" }
       - { label: "Content", name: "content", widget: "markdown" }
 
@@ -155,7 +155,7 @@ collections:
         multiple: true,
         required: false
       }
-      - { label: "Preview", name: "preview", widget: "image" }
+      - { label: "Preview", name: "preview", widget: "image", required: false }
       - { label: "Short description", name: "short_description", widget: "string", required: true }
       - { label: "Description", name: "description", widget: "markdown" }
 
@@ -168,8 +168,8 @@ collections:
     identifier_field: slug
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "Slug", name: "slug", widget: "string" }
-      - { label: "Preview", name: "preview", widget: "image" }
+      - { label: "Slug", name: "slug", widget: "string", required: false }
+      - { label: "Preview", name: "preview", widget: "image", required: false }
       - { label: "Description", name: "content", widget: "markdown", required: false }
 
   - name: "tags"
@@ -181,5 +181,5 @@ collections:
     identifier_field: slug
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string", required: false }
       - - { label: "Description", name: "content", widget: "markdown", required: false }
