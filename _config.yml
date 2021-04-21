@@ -41,6 +41,18 @@ defaults:
 
   - scope:
       path: ''
+      type: 'products'
+    values:
+      layout: 'product'
+
+  - scope:
+      path: ''
+      type: 'notes'
+    values:
+      layout: 'note'
+
+  - scope:
+      path: ''
     values:
       layout: 'default'
 
