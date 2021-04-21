@@ -53,6 +53,18 @@ defaults:
 
   - scope:
       path: ''
+      type: 'categories'
+    values:
+      layout: 'categorie'
+
+  - scope:
+      path: ''
+      type: 'tags'
+    values:
+      layout: 'tag'
+
+  - scope:
+      path: ''
     values:
       layout: 'default'
 
