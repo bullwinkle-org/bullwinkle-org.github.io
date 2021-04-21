@@ -1,7 +1,7 @@
 ---
 title: Experiments
 ---
-# Experiments page
+# Experiments
 
 ```html
 <video autoplay loop controls>
@@ -16,10 +16,6 @@ title: Experiments
  Video player is not supported, 
 <a href="/assets/uploads/loader.mov">loader.mov</a>
 </video>
-
-
-
-
 
 ```html
 <img src="/assets/uploads/android-chrome-512x512.png" alt="image">
