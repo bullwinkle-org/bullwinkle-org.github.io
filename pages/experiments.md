@@ -1,7 +1,7 @@
 ---
 title: Experiments
 ---
-<h1>Experiments page</h1>
+# Experiments page
 
 <video autoplay loop preload="metadata">
   <source src="/assets/uploads/loader.mov">
