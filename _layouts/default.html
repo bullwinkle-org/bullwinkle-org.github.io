@@ -134,11 +134,6 @@
 <script>
   (() => {
     const GITHUB = window.GITHUB = {{ site.github | jsonify }};
-    const categories = window.categories = {{ site.categories | jsonify }};
-    const tags = window.tags = {{ site.tags | jsonify }};
-    console.log(GITHUB);
-    console.log(categories);
-    console.log(tags);
   })();
 </script>
 <!-- END GITHUB -->
