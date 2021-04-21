@@ -14,9 +14,6 @@ items:
   - name: Products
     link: /pages/products/
     target: _self
-  - name: Categories
-    link: /pages/categories/
-    target: _self
   - name: Notes
     link: /pages/notes/
     target: _self
