@@ -1,0 +1,12 @@
+---
+title: Products
+---
+<h1>Products</h1>
+
+<ul>
+  {% for product in site.products %}
+  <li>
+    <pre>{{ product | jsonify }}</pre>
+  </li>
+  {% endfor %}
+</ul>

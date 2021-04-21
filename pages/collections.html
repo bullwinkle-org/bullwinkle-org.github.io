@@ -1,0 +1,12 @@
+---
+title: Collections
+---
+<h1>Collections</h1>
+
+<ul>
+  {% for collection in site.collections %}
+  <li>
+    {{ collection.label }} ({{ collection.relative_directory }})
+  </li>
+  {% endfor %}
+</ul>

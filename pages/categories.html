@@ -1,0 +1,12 @@
+---
+title: Categories
+---
+<h1>Categories</h1>
+
+<ul>
+  {% for category in site.categories %}
+  <li>
+    {{ category[0] }} ({{ category[1].size }})
+  </li>
+  {% endfor %}
+</ul>

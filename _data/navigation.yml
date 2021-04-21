@@ -20,6 +20,15 @@ items:
   - name: Notes
     link: /pages/notes/
 
+  - name: Tags
+    link: /pages/tags/
+
+  - name: Categories
+    link: /pages/categories/
+
+  - name: Collections
+    link: /pages/collections/
+
   - name: System info
     link: /pages/system-info/
 

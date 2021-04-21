@@ -6,10 +6,10 @@ backend:
   branch: main # Branch to update (optional; defaults to master)
   repo: bullwinkle-org/bullwinkle-org.github.io
   api_root: https://api.github.com
-  site_domain:
-  base_url:
-  auth_endpoint:
-  cms_label_prefix:
+#  site_domain:
+#  base_url:
+#  auth_endpoint:
+#  cms_label_prefix:
 
 collections:
   - name: "config"
