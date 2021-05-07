@@ -1,10 +1,11 @@
 ---
-title: ttttttt2
-slug: ttttttt2
+title: Product 3
+slug: product3
 category:
   - cat-1
 tags:
   - tag-1
-short_description: asdfgh
-description: dgcfhvjbknlm;,';lkmnjbhvgn
+preview: /assets/uploads/product.png
+short_description: Short description
+description: Full description
 ---
