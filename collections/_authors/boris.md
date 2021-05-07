@@ -1,7 +1,7 @@
 ---
 name: Boris Badenov
 slag: boris
-slug: Boris
+slug: boris
 position: author
 avatar: /assets/uploads/boris_badenov_px.png
 ---
