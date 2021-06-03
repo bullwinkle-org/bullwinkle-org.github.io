@@ -6,7 +6,7 @@ title: Categories
 <ul>
   {% for category in site.categories %}
   <li>
-    {{ category[0] }} ({{ category[1].size }})
+    <a href="{{ category[0] }}.html" title="{{ category[1] | jsonify }}">{{ category[0] }} ({{ category[1].size }})</a>
   </li>
   {% endfor %}
 </ul>
