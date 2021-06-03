@@ -8,14 +8,14 @@ repository: 'bullwinkle-org/bullwinkle-org.github.io'
 
 url: 'https://bullwinkle.space'
 
-collections_dir: 'collections'
+# collections_dir: 'collections'
 
 collections:
-#  categories:
-#    output: true
-#
-#  tags:
-#    output: true
+  categories:
+    output: true
+
+  tags:
+    output: true
 
   authors:
     output: true
@@ -29,15 +29,27 @@ collections:
 defaults:
   - scope:
       path: ''
-      type: 'authors'
+      type: 'categories'
     values:
-      layout: 'author'
+      layout: 'category'
+
+  - scope:
+      path: ''
+      type: 'tags'
+    values:
+      layout: 'tag'
 
   - scope:
       path: ''
       type: 'posts'
     values:
       layout: 'post'
+
+  - scope:
+      path: ''
+      type: 'authors'
+    values:
+      layout: 'author'      
 
   - scope:
       path: ''
@@ -49,19 +61,7 @@ defaults:
       path: ''
       type: 'notes'
     values:
-      layout: 'note'
-
-  - scope:
-      path: ''
-      type: 'categories'
-    values:
-      layout: 'category'
-
-  - scope:
-      path: ''
-      type: 'tags'
-    values:
-      layout: 'tag'
+      layout: 'note'      
 
   - scope:
       path: ''
@@ -85,7 +85,7 @@ plugins:
   - jekyll-pwa-plugin
   - jekyll-admin
 
-livereload: true
+livereload: false
 
 ############################################################
 # Site configuration for the Jekyll 3 Pagination Gem
