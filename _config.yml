@@ -6,21 +6,20 @@ repository: 'bullwinkle-org/bullwinkle-org.github.io'
 url: 'https://bullwinkle.space'
 incremental: true
 livereload: true
-# theme: jekyll-theme-minimal
-# remote_theme: ItsMeaga1n/minimal-categorized
-
-collections_dir: 'collections'
-# lsi: true
-pages_dir: pages
+#collections_dir: 'collections'
+#pages_dir: 'pages'
 profile: true
 verbose: true
+# theme: jekyll-theme-minimal
+# remote_theme: ItsMeaga1n/minimal-categorized
+# lsi: true
 
 collections:
-  categories:
-    output: true
-
-  tags:
-    output: true
+#  categories:
+#    output: true
+#
+#  tags:
+#    output: true
 
   authors:
     output: true
@@ -82,12 +81,12 @@ plugins:
   - jekyll-seo-tag
   - jekyll-pwa-plugin
   - jekyll-paginate-v2
-  - jekyll-datapage-generator
-  - jekyll-admin
+#  - jekyll-datapage-generator
+#  - jekyll-admin
 
-show_dir_listing: true
+show_dir_listing: false
 
-permalink: '/blog/:categories/:year/:month/:day/:title/'
+#permalink: '/blog/:categories/:year/:month/:day/:title/'
 page_excerpts: true
 show_excerpts: true
 #paginate_path: '/page:num/'
