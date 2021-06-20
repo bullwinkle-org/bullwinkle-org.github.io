@@ -1,0 +1,189 @@
+media_folder: 'assets/uploads'
+public_folder: "/assets/uploads" # The src attribute for uploaded media will begin with /images/uploads
+
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+  repo: bullwinkle-org/bullwinkle-org.github.io
+  api_root: https://api.github.com
+#  site_domain:
+#  base_url:
+#  auth_endpoint:
+#  cms_label_prefix:
+
+collections:
+  - name: "config"
+    label: "Config"
+    editor:
+      preview: false
+    files:
+      - label: "Navigation"
+        name: "navigation"
+        file: "_data/navigation.yml"
+        fields:
+          - label: "Navigation Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Link, name: link, widget: string}
+              - {label: Target, name: target, widget: select,
+                 options: ['_self', '_blank', 'top', 'parent'],
+                 default: '_self',
+                 required: false
+              }
+
+  - name: 'pages'
+    label: 'Pages'
+    label_singular: "page"
+    editor:
+      preview: false
+    files:
+      - label: 'About'
+        name: 'about'
+        file: 'pages/about.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'hidden', default: 'about' }
+          - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'about' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Experiments'
+        name: 'experiments'
+        file: 'pages/experiments.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'hidden', default: 'experiments' }
+          - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'experiments' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    label_singular: "post"
+    folder: "collections/_posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Label", name: "label", widget: "string", required: true }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Publish Date", name: "date", widget: "datetime", required: true }
+      - {
+        label: "Author",
+        name: "author",
+        widget: "relation",
+        collection: "authors",
+        search_fields: [ "name","slug","position" ],
+        value_field: "slug",
+        display_fields: [ "{{slug}} ({{name}}) - {{position}}" ],
+        required: true
+      }
+      - { label: "Body", name: "body", widget: "markdown", required: true }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image", required: false }
+      - {
+        label: "Category",
+        name: "category",
+        widget: "relation",
+        collection: "categories",
+        search_fields: [ "slug","title" ],
+        value_field: "slug",
+        display_fields: [ "{{title}} ({{slug}})" ],
+        default: ["uncategorized"],
+        required: true
+      }
+      - {
+        label: "Tags",
+        name: "tags",
+        widget: "relation",
+        collection: "tags",
+        search_fields: [ "slug","title" ],
+        value_field: "slug",
+        display_fields: [ "{{title}} ({{slug}})" ],
+        required: false
+      }
+
+  - name: "authors"
+    label: "Authors"
+    label_singular: "author"
+    folder: "collections/_authors"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: slug
+    fields:
+      - { label: "Name", name: "name", widget: "string", required: true }
+      - { label: "Slug", name: "slug", widget: "string", required: true }
+      - { label: "Position", name: "position", widget: "string", default: "" }
+      - { label: "Avatar", name: "avatar", widget: "image", default: "/uploads/bwk_bot.png" }
+      - { label: "Body", name: "body", widget: "markdown", default: "" }
+
+  - name: "notes"
+    label: "Notes"
+    label_singular: "note"
+    folder: "collections/_notes"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: slug
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Slug", name: "slug", widget: "string", required: true }
+      - { label: "Preview", name: "preview", widget: "image", required: false }
+      - { label: "Content", name: "content", widget: "markdown" }
+
+  - name: "products"
+    label: "Products"
+    label_singular: "product"
+    folder: "collections/_products"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: slug
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - {
+        label: "Category",
+        name: "category",
+        widget: "relation",
+        collection: "categories",
+        search_fields: [ "slug","title" ],
+        value_field: "slug",
+        display_fields: [ "{{title}} ({{slug}})" ],
+        default: ["uncategorized"],
+        multiple: true,
+        required: true
+      }
+      - {
+        label: "Tags",
+        name: "tags",
+        widget: "relation",
+        collection: "tags",
+        search_fields: [ "slug","title" ],
+        value_field: "slug",
+        display_fields: [ "{{title}} ({{slug}})" ],
+        multiple: true,
+        required: false
+      }
+      - { label: "Preview", name: "preview", widget: "image", required: false }
+      - { label: "Short description", name: "short_description", widget: "string", required: true }
+      - { label: "Description", name: "description", widget: "markdown" }
+
+  - name: "categories"
+    label: "Categories"
+    label_singular: "category"
+    folder: "collections/_categories"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: slug
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Slug", name: "slug", widget: "string", required: true }
+      - { label: "Preview", name: "preview", widget: "image", required: false }
+      - { label: "Description", name: "content", widget: "markdown", required: false }
+
+  - name: "tags"
+    label: "Tags"
+    label_singular: "tag"
+    folder: "collections/_tags"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: slug
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Slug", name: "slug", widget: "string", required: true }
+      - { label: "Description", name: "content", widget: "markdown", required: false }
